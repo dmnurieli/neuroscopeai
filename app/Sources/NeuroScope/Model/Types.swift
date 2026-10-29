@@ -261,8 +261,8 @@ enum ColorMode: String, CaseIterable, Sendable {
 struct ViewSettings: Hashable, Sendable {
     var layout: LayoutMode = .stack
     var colorMode: ColorMode = .activation
-    var glowHalfLife: Float = 0.35   // seconds for a neuron's glow to halve after it fires
-    var exposure: Float = 1.0        // brightness gain
+    var glowHalfLife: Float = 0.12   // seconds for a desk's colour to halve after a word: short, so each word reads on its own
+    var exposure: Float = 1.0        // Intensity: how many desks light per floor (Salience.litShare); gain for diff/heads
     var threshold: Float = 0.08      // normalized activations below this stay dark
     var showHeads: Bool = true
     var pointSize: Float = 1.0

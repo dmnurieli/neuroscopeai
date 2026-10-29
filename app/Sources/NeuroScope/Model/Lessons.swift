@@ -31,7 +31,7 @@ enum Lessons {
                        action: .replay,
                        field: .overview),
             LessonPage(id: "l1p5",
-                       text: "Colorful desks are busy. Grey desks are resting.",
+                       text: "Colorful desks are the busiest on their floor for this word. Grey desks are quieter.",
                        field: .keep),
             LessonPage(id: "l1p6",
                        text: "Here is what it wrote. Every word took one trip up the building.",

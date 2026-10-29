@@ -15,10 +15,10 @@ struct WatchStep: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
             StepHeader(title: "Watch it think",
-                       explainer: "Each dot is one desk in the building. The more colorful a dot, the harder that desk is working on the current word.")
+                       explainer: "Each dot is one desk in the building. For each word, the busiest desks on every floor light up: the more colorful a dot, the harder that desk is working.")
             let g = state.geometry
             LearnCard(([
-                "Every floor has {desks} desks ({allDesks} in all). Each desk is a **neuron** - a tiny worker that does one small piece of the job. A desk lights up when its worker is busy with the current word: **amber** means it is pushing for \"more of this\", **blue** means \"less of this\", and **grey** means idle.",
+                "Every floor has {desks} desks ({allDesks} in all). Each desk is a **neuron** - a tiny worker that does one small piece of the job. A desk lights up when it is among the busiest on its floor for the current word: **amber** means it is pushing for \"more of this\", **blue** means \"less of this\", and **grey** means it is quieter than those.",
                 "A note sheet called the **residual stream** - the memo - rides the elevator up all {floors} floors. Each floor reads it and adds its own notes. The top floor reads the finished memo and picks the next word.",
             ] + (state.hasThinking ? [
                 "Before answering, the building may write notes to itself on scratch paper. That is **thinking**, shown as dim italic text. It helps the reply, but it is not part of it.",
@@ -28,7 +28,7 @@ struct WatchStep: View {
                 "The **cluster** layout reseats the desks so coworkers who get busy at the same moments sit together, in neighborhoods. The real building has no seating plan; desk numbers mean nothing on their own.",
             ]).map(g.fill), words: [
                 ("neuron", g.fill("one desk; {desks} on each floor")),
-                ("amber / blue / grey", "pushing for more / pushing for less / idle"),
+                ("amber / blue / grey", "busiest, pushing for more / busiest, pushing for less / quieter"),
                 ("residual stream", "the memo that rides the elevator up; each floor adds notes"),
             ] + (state.hasThinking ? [("thinking", "scratch paper the building writes to itself before answering")] : []) + [
                 ("token", "a word-piece; the timeline shows these"),

@@ -44,13 +44,13 @@ All of these are in the Advanced panel if you ever want to set them yourself.
 
 ## Step 2 - Watch
 
-The field of dots is the building at work. Each dot is one desk. A desk turns colorful when its worker is busy with the current word:
+The field of dots is the building at work. Each dot is one desk. For each word, the busiest desks on every floor turn colorful:
 
 - **Amber** means the worker is pushing for "more of this".
 - **Blue** means the worker is pushing for "less of this".
-- **Grey** means the desk is idle.
+- **Grey** means the desk is quieter than those right now.
 
-The brighter the color, the harder that worker is pushing right now.
+The stronger the color, the harder that worker is pushing right now. Only a few desks per floor light up at once, so you can see which ones are doing the work for this word.
 
 The building writes in **tokens**: word-pieces, not always whole words. For example, it writes "volcanoes" as "volcan" + "oes". Each time it writes one piece, the dots update, so you watch the activity move as the building answers.
 
@@ -582,7 +582,7 @@ A **site** is a checkpoint where you can read the memo. Site 0 is right after th
 - **Residual stream**: the memo that rides the elevator up all 16 floors, gaining notes from each one.
 - **Amber**: in Watch, a desk pushing for "more of this".
 - **Blue**: in Watch, a desk pushing for "less of this"; in Compare, a desk that worked less after your change.
-- **Grey**: an idle desk.
+- **Grey**: a quieter desk, not among the busiest on its floor for the current word.
 - **Token**: a word-piece the building writes, like "volcan" + "oes".
 - **Cluster layout**: desks reseated so coworkers who get busy together sit together; a picture, not a real seating plan.
 - **Remove**: a filter in the elevator that erases one highlighter color on every floor.

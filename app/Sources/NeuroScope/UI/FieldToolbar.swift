@@ -28,6 +28,7 @@ struct FieldToolbar: View {
             if state.clusterLayout == nil { clusterBtn }
             labeled("Color") { color }
             labeled("Intensity") { Slider(value: $s.view.exposure, in: 0.1...2) }
+                .help("How many of each floor's busiest desks light up for the current word")
             labeled("Fade") { Slider(value: $s.view.glowHalfLife, in: 0.05...2) }
             labeled("Size") { Slider(value: $s.view.pointSize, in: 0.5...3) }
             HStack { heads; Spacer(minLength: 0); reset }

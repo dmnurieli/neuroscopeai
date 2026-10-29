@@ -10,8 +10,9 @@
 //
 // Look: every unit is a crisp, opaque, depth-tested round dot (4x MSAA, no bloom, no additive blending),
 // so overlapping planes occlude instead of summing toward white. Activation is shown as COLOR SATURATION:
-// a resting unit is a dim desaturated grey-blue; as |activation| / layerScale rises its colour moves toward a
-// fully saturated hue (amber +, cyan/blue −; diff: red up, blue down) with only a modest luminance rise.
+// a resting unit is a small, dim, desaturated grey-blue dot; a busy one is a larger dot in a fully saturated hue
+// (amber +, cyan/blue −; diff: red up, blue down). Desks are coloured by RANK within their floor at the current word
+// (`salience`): only each floor's busiest few saturate, so the working desks read at a glance and the rest recede.
 // All colours are authored in sRGB and written straight into the bgra8Unorm target.
 
 enum Shaders {
@@ -103,6 +104,22 @@ enum Shaders {
         return pow(s, 1.6);
     }
 
+    // ---- Salience by rank (activation mode, desks) -------------------------------------------
+    // c = this floor's cutoffs at the current word (Salience.swift): x faint tier starts, y lit tier starts, z largest.
+    // The lit tier (each floor's busiest ~1%) maps to 0.62…1 (a clearly saturated hue at any rank inside it), the faint
+    // tier (the next ~2%) to 0…0.3 (a tint), everything else to 0. A gate against the run-wide scale (that floor's 99.5th
+    // percentile over the whole run) keeps a floor that is nearly flat at this word from lighting up its noise. It opens at
+    // 0.12, the line below which the desk card says "Idle on this word" (InspectorView.activityLine), so a coloured desk is
+    // never called idle. On OLMo 2 1B a floor's lit cutoff sits near 0.7 of that scale on a typical word, so the gate only
+    // greys the rare nearly-flat word.
+    float salience(float a, float4 c, float runScale) {
+        if (c.z <= 1e-6 || a < c.x) return 0.0;
+        float s;
+        if (a >= c.y) s = 0.62 + 0.38 * saturate((a - c.y) / max(c.z - c.y, 1e-6));
+        else s = 0.30 * saturate((a - c.x) / max(c.y - c.x, 1e-6));
+        return s * smoothstep(0.12, 0.20, a / max(runScale, 1e-6));
+    }
+
     // ---- Compute: per-unit normalized signed target ------------------------------------------
     kernel void computeTargets(device const half *neurons [[buffer(0)]],
                                device const float *heads [[buffer(1)]],
@@ -111,14 +128,18 @@ enum Shaders {
                                device const float *headScales [[buffer(4)]],
                                device float *targets [[buffer(5)]],
                                constant TargetParams &p [[buffer(6)]],
+                               device const float4 *cutoffs [[buffer(7)]],
                                uint i [[thread_position_in_grid]]) {
         uint total = p.numNeurons + p.numHeads;
         if (i >= total) return;
         if (i < p.numNeurons) {
             uint l = min(i / max(p.neuronsPerLayer, 1u), p.numLayers - 1);
             float s = max(layerScales[l], 1e-6);
-            float v = (p.mode == 1) ? diff[i] : float(neurons[i]);
-            targets[i] = v / s;
+            if (p.mode == 1) { targets[i] = diff[i] / s; return; }
+            // Activation: a signed salience 0…1 (rank on its floor at this word), not a scaled value.
+            float v = float(neurons[i]);
+            float sal = salience(abs(v), cutoffs[l], s);
+            targets[i] = v >= 0.0 ? sal : -sal;
         } else {
             uint j = i - p.numNeurons;
             if (p.mode == 1) { targets[i] = 0.0; return; }
@@ -167,10 +188,15 @@ enum Shaders {
         float4 p = unitPos(posA, posB, iid, u.morph);
         bool isHead = iid >= u.numNeurons;
         float g = glow[iid];
-        float n = abs(g) * max(u.exposure, 0.0);
-        // Head norms are all positive and cluster well above zero; gate them higher so only standouts colour.
-        if (isHead && u.colorMode == 0) n = max(n - 0.55, 0.0) / 0.45;
-        float s = saturate(saturation(n, u.threshold));
+        float s;
+        if (!isHead && u.colorMode == 0) {
+            s = saturate(abs(g));                       // already a salience (rank on its floor), see computeTargets
+        } else {
+            float n = abs(g) * max(u.exposure, 0.0);
+            // Head norms are all positive and cluster well above zero; gate them higher so only standouts colour.
+            if (isHead && u.colorMode == 0) n = max(n - 0.55, 0.0) / 0.45;
+            s = saturate(saturation(n, u.threshold));
+        }
 
         float3 hue;
         if (u.colorMode == 1) hue = g >= 0.0 ? kDiffUp : kDiffDown;
@@ -178,6 +204,7 @@ enum Shaders {
         float3 col = mix(isHead ? kRestHead : kRest, hue, s);
         float traceGrow = 1.0;
         float minScale = 1.0;
+        bool traced = false;                              // a slow-motion trace node: keeps its uniform size and ring fit
         float mapMix = smoothstep(0.0, 1.0, u.traceMap);
         if (u.traceOn > 0.5) {
             // x: 0 not in the trace, 1 a target (y = signed arriving sum, −1…1), 2 a source-only desk (y = reveal 0…1).
@@ -187,12 +214,14 @@ enum Shaders {
                 traceGrow = mix(1.0, 0.55, mapMix);          // dust: smaller and fainter, never a glow
                 minScale = mix(1.0, 0.6, mapMix);
             } else if (ti.x < 1.5) {
+                traced = true;
                 float fs = saturate(abs(ti.y));
                 float3 th = ti.y >= 0.0 ? kPositive : kNegative;
                 col = mix(kRest * 1.35, th, pow(fs, 0.8));
                 traceGrow = mix(1.35, 3.0, mapMix);          // traced node: ~3x the normal dot
                 minScale = mix(1.0, 3.0, mapMix);
             } else {
+                traced = true;
                 col = mix(kRest * 1.35, col, saturate(ti.y));
                 traceGrow = mix(1.35, 3.0, mapMix);
                 minScale = mix(1.0, 3.0, mapMix);
@@ -204,10 +233,10 @@ enum Shaders {
             fl = min(fl, 63u);
             float hw = u.hl[fl >> 2][fl & 3u];
             col = mix(kBackground, col, mix(0.15, 1.0, hw));   // other floors: faint dust
-            // Highlighted floors: resting desks lifted to a visible dim grey (busy desks keep their full saturated hue).
-            // 0.5, not 1.1: at 8,192 desks a floor the resting dots cover most of the field, and a brighter grey
-            // drowned the few saturated ones.
-            col += kRest * 0.5 * hw * (1.0 - s);
+            // Highlighted floors: resting desks lifted a touch so the floor's shape reads (busy desks keep their full
+            // hue). 0.2: at 8,192 desks a floor the resting dots cover most of the field, and a brighter grey (0.5,
+            // 1.1 before) drowned the few saturated ones in a grey haze.
+            col += kRest * 0.2 * hw * (1.0 - s);
             traceGrow *= mix(0.6, 1.0, hw);
             minScale *= mix(0.6, 1.0, hw);
         }
@@ -216,18 +245,24 @@ enum Shaders {
         float depth = max(-vp.z, 1e-3);
         // Depth fade: back planes sink slightly toward the background.
         float fade = saturate((depth - u.fadeNear) / max(u.fadeFar - u.fadeNear, 1e-3));
-        col = mix(col, kBackground, fade * 0.6);
+        // Busy desks keep most of their hue at the back, so a lit desk on a far floor still reads as lit.
+        col = mix(col, kBackground, fade * 0.6 * (1.0 - 0.7 * s));
 
-        // Footprint: at most a slight size increase with saturation; never a halo.
+        // Footprint: resting desks recede (0.7 of the natural dot), busy ones stand out (up to 2.2x); a larger crisp
+        // disc, never a halo. Heads and slow-motion trace nodes keep the old modest growth (a trace node is already ~3x and
+        // must stay inside its ring).
         float pxPerWorld = u.proj[1][1] / depth * u.viewport.y * 0.5;
         float natural = p.w * u.pointSize * (isHead ? 2.3 : 1.0);
-        float radius = natural * (1.0 + 0.15 * s) * traceGrow;
+        bool modest = isHead || traced;
+        float grow = modest ? (1.0 + 0.15 * s) : (0.7 + 1.5 * s);
+        float radius = natural * grow * traceGrow;
         float px = radius * pxPerWorld;
-        // The pixel floor keeps far dots visible, but for resting desks never past ~0.4 of the desk pitch on screen
+        // The pixel floor keeps far dots visible, but for resting desks never past ~0.3 of the desk pitch on screen
         // (p.w is 0.3 pitch): at 8,192 desks a floor the pitch can be ~3 px, and a fixed floor fused neighbours into
-        // solid grey sheets. Busy desks keep the full floor (a third larger at full saturation), so a saturated dot stays
-        // a readable crisp disc when the field is pixel-limited; up close the floor is inactive and only the 15% applies.
-        float minPxHere = mix(min(u.minPx, natural * pxPerWorld * 1.3), u.minPx * 1.35, s) * minScale;
+        // solid grey sheets. Busy desks get a raised floor (3x at full salience), so a saturated dot stays a readable
+        // crisp disc when the field is pixel-limited and the eye finds it among thousands of grey ones.
+        float restFloor = modest ? min(u.minPx, natural * pxPerWorld * 1.3) : min(u.minPx * 0.8, natural * 0.7 * pxPerWorld * 1.3);
+        float minPxHere = mix(restFloor, u.minPx * (modest ? 1.35 : 3.0), s) * minScale;
         if (px < minPxHere) radius *= minPxHere / max(px, 1e-4);
         float2 c = kCorners[vid];
         vp.xy += c * radius;

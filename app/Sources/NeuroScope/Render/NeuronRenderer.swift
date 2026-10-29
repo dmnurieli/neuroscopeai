@@ -1,8 +1,9 @@
 // MTKViewDelegate that draws ~86k units as crisp round dots. Data path per displayed token:
-// Float16 activations (172 KB) → MTLBuffer → compute kernel (normalize per layer, persisted value =
-// max(value·decay, new)) → instanced dot pass into a 4x MSAA bgra8 target with a depth buffer (opaque,
-// depth-tested: overlapping planes occlude, never sum) → resolved straight into the drawable.
-// Activation is drawn as colour saturation (see `saturation` in Shaders.swift); there is no bloom.
+// Float16 activations (172 KB) → per-floor rank cutoffs on the CPU (Salience.swift) → MTLBuffer → compute kernel
+// (salience by rank per floor, persisted value = max(value·decay, new)) → instanced dot pass into a 4x MSAA bgra8
+// target with a depth buffer (opaque, depth-tested: overlapping planes occlude, never sum) → resolved straight into
+// the drawable. Activation is drawn as colour saturation and dot size (see `salience` and `saturation` in
+// Shaders.swift); there is no bloom.
 //
 // MTKView requirements (set by the hosting field view):
 //   view.colorPixelFormat = .bgra8Unorm, view.depthStencilPixelFormat = .invalid,
@@ -146,6 +147,7 @@ final class NeuronRenderer: NSObject, MTKViewDelegate {
     private var diffBufs: [MTLBuffer] = []
     private var layerScaleBufs: [MTLBuffer] = []
     private var headScaleBufs: [MTLBuffer] = []
+    private var cutoffBufs: [MTLBuffer] = []
     private let targets: MTLBuffer
     private let glow: MTLBuffer
 
@@ -155,6 +157,10 @@ final class NeuronRenderer: NSObject, MTKViewDelegate {
     private var pendingDiff: [Float]
     private var pendingLayerScales: [Float]
     private var pendingHeadScales: [Float]
+    /// Per-floor rank cutoffs for the word on display (Salience.cutoffs), recomputed when the word or Intensity changes.
+    private var pendingCutoffs: [SIMD4<Float>]
+    private var cutoffScratch: [Float] = []
+    private var cutoffExposure: Float = .nan
     private var pendingMode: UInt32 = 0
     private var dataDirty = false
     private var pendingSnap = true
@@ -289,19 +295,21 @@ final class NeuronRenderer: NSObject, MTKViewDelegate {
                   let d = device.makeBuffer(length: 4 * max(numNeurons, 1), options: .storageModeShared),
                   let ls = device.makeBuffer(length: 4 * L, options: .storageModeShared),
                   let hs = device.makeBuffer(length: 4 * L, options: .storageModeShared),
+                  let co = device.makeBuffer(length: MemoryLayout<SIMD4<Float>>.stride * L, options: .storageModeShared),
                   let m = device.makeBuffer(length: MemoryLayout<NSMarker>.stride * markerCapacity, options: .storageModeShared),
                   let ti = device.makeBuffer(length: MemoryLayout<SIMD2<Float>>.stride * max(numUnits, 1), options: .storageModeShared)
             else { return nil }
             memset(ti.contents(), 0, ti.length)
             traceInfoBufs.append(ti)
             uniformBufs.append(u); neuronBufs.append(n); headBufs.append(h); diffBufs.append(d)
-            layerScaleBufs.append(ls); headScaleBufs.append(hs); markerBufs.append(m)
+            layerScaleBufs.append(ls); headScaleBufs.append(hs); markerBufs.append(m); cutoffBufs.append(co)
         }
         pendingNeurons = [Float16](repeating: 0, count: numNeurons)
         pendingHeads = [Float](repeating: 0, count: numHeads)
         pendingDiff = [Float](repeating: 0, count: numNeurons)
         pendingLayerScales = [Float](repeating: 1, count: L)
         pendingHeadScales = [Float](repeating: 1, count: L)
+        pendingCutoffs = [SIMD4<Float>](repeating: .zero, count: L)
         super.init()
         writePositions(posA, from, .stack)
         writePositions(posB, from, .stack)
@@ -398,6 +406,7 @@ final class NeuronRenderer: NSObject, MTKViewDelegate {
         copyScales(headScales, into: &pendingHeadScales)
         pendingMode = 0
         settings.colorMode = .activation
+        updateCutoffs()
         markDirty(pulse: pulse)
     }
 
@@ -442,6 +451,16 @@ final class NeuronRenderer: NSObject, MTKViewDelegate {
         pendingMode = 1
         settings.colorMode = .contrast
         markDirty(pulse: false)
+    }
+
+    /// Per-floor rank cutoffs of the word in pendingNeurons at the current Intensity (activation mode only).
+    private func updateCutoffs() {
+        let lit = Salience.litShare(exposure: settings.exposure)
+        cutoffExposure = settings.exposure
+        pendingCutoffs = pendingNeurons.withUnsafeBufferPointer {
+            Salience.cutoffs($0, perLayer: geometry.numNeurons, layers: max(geometry.numLayers, 1), litShare: lit,
+                             faintShare: Salience.faintShare * lit / Salience.litShare, scratch: &cutoffScratch)
+        }
     }
 
     private func copyScales(_ src: [Float], into dst: inout [Float]) {
@@ -891,6 +910,11 @@ final class NeuronRenderer: NSObject, MTKViewDelegate {
         }
 
         // ---- Compute
+        // Intensity sets how many desks light per floor: a change re-ranks the word on display (no trail).
+        if pendingMode == 0, settings.exposure != cutoffExposure {
+            updateCutoffs()
+            if !dataDirty { dataDirty = true; pendingSnap = true; pendingPulse = false }
+        }
         if let ce = cb.makeComputeCommandEncoder() {
             let total = numUnits
             if dataDirty {
@@ -901,6 +925,9 @@ final class NeuronRenderer: NSObject, MTKViewDelegate {
                 }
                 _ = pendingLayerScales.withUnsafeBytes { memcpy(layerScaleBufs[slot].contents(), $0.baseAddress!, $0.count) }
                 _ = pendingHeadScales.withUnsafeBytes { memcpy(headScaleBufs[slot].contents(), $0.baseAddress!, $0.count) }
+                _ = pendingCutoffs.withUnsafeBytes {
+                    memcpy(cutoffBufs[slot].contents(), $0.baseAddress!, min($0.count, cutoffBufs[slot].length))
+                }
                 var tp = NSTargetParams(numNeurons: UInt32(numNeurons), numHeads: UInt32(numHeads),
                                         neuronsPerLayer: UInt32(geometry.numNeurons), headsPerLayer: UInt32(geometry.numHeads),
                                         numLayers: UInt32(max(geometry.numLayers, 1)), mode: pendingMode)
@@ -912,6 +939,7 @@ final class NeuronRenderer: NSObject, MTKViewDelegate {
                 ce.setBuffer(headScaleBufs[slot], offset: 0, index: 4)
                 ce.setBuffer(targets, offset: 0, index: 5)
                 ce.setBytes(&tp, length: MemoryLayout<NSTargetParams>.stride, index: 6)
+                ce.setBuffer(cutoffBufs[slot], offset: 0, index: 7)
                 dispatch(ce, targetsPSO, total)
             }
             let hl = Double(max(settings.glowHalfLife, 0.005))
