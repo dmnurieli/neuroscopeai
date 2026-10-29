@@ -1,6 +1,6 @@
 # Train your own AI — lesson design (phase B)
 
-Last updated: 2026-10-29 13:20 EDT
+Last updated: 2026-10-29 13:05 EDT
 
 Phase A built the engine: `trainer/` measures the Mac, downloads Wikipedia, trains a small OLMo 2 shaped model
 with MLX, tunes it to answer questions, and exports it in the layout the neuron viewer already reads. Its
@@ -64,13 +64,18 @@ The airline bridge: in the airline course the clipboard held a flight's facts. H
   learning, not memorizing (the cramming lesson, revisited).
 - **The notebook.** At each milestone (`sample` events) a new page appears with the model's continuation of five
   fixed openings ("The capital of France is", "An airplane is", …). Pages stack, newest on top, and the learner
-  can flip back. Our first real run (the 30-minute plan, tiny size) shows the arc this lesson is about, in its own
-  words:
-  - before training: `iloOADaddListener nerves AppleWebKitakah forks…` (random word pieces)
-  - after 1M word pieces: `, and, the in the as not the in. by an.` (the most common words, no order)
-  - after 9M: `known as a "t" as known as "B" and "V"` (phrases, borrowed shapes)
-  - later milestones: full sentences, with invented facts (the run's final samples are recorded in the phase-A
-    report)
+  can flip back. The first real run (the 30-minute plan on a Mac Studio: tiny size, 185M word pieces, 26
+  minutes) shows the arc this lesson is about, in its own words, for "The capital of France is":
+  - before training: `_ALL compliantanteed.getDeclared) … potato autor marin_regs jumps-bootstrap` (random word
+    pieces)
+  - after 1M word pieces: `,,. on  was the. (, the and the and are..` (the most common words, no order)
+  - after 9M: `known as the "R" is known as "C" or "B".` (phrases, borrowed shapes)
+  - after 37M: `often the second most popular city. The French-speaking German and the Dutch are also the largest
+    cities in Asia` (sentences, invented facts)
+  - after 185M: `Béla. It was the capital of France. In the mid-20th century, the army's army and the army was
+    stationed.` (fluent, confidently wrong)
+
+  Loss on unseen articles fell from 11.59 to 7.91 (1M), 5.80 (9M), 4.84 (37M) and 4.28 (185M).
 
   Because each prompt keeps the same random seed at every milestone, the only thing that changes between pages is
   the model. Say so once.
@@ -87,7 +92,10 @@ minute plan produces its first readable phrases within the first two minutes, wh
 Graduation already used "flight school" for instruction tuning; reuse the name. Before tuning (step 0), the model
 answers "How do airplanes fly?" by continuing the text like an encyclopedia page; after, it tries to answer. The
 notebook shows those two side by side. Copy should be honest: a small model will answer confidently and often
-wrongly. That is the point to make: answering is a learned habit, separate from knowing.
+wrongly. That is the point to make: answering is a learned habit, separate from knowing. In the first run
+(921 steps, 80 seconds), "What is the capital of France?" went from `how, if any, that is? (F. 2006, "What is
+the capital?` to `The capital of France is the capital of French-Hungary`, and "Write one sentence about the
+ocean." from a row of `#` signs to `The ocean is composed of three different types of ocean:`.
 
 The tuning set is small (about 12,000 English conversations from Tulu 3's OpenAssistant and FLAN sources) and
 the step takes about 7% of the chosen time.
@@ -129,7 +137,7 @@ light up. Two things to try, both prepared by the lesson:
   stdout lines, decode the events in `docs/trainer-protocol.md`, send SIGTERM on pause or quit, hold a sleep
   assertion while it runs.
 - A Python environment. Phase A uses `uv` with pinned versions (`trainer/pyproject.toml`, `uv.lock`). For release,
-  either ship `uv` inside the app and create the environment on first use (about 150 MB download, MLX included),
+  either ship `uv` inside the app and create the environment on first use (the environment is about 420 MB on disk, most of it MLX and pyarrow),
   or bundle a relocatable Python with the wheels. The first is simpler; decide when packaging.
 - "Open a model folder" in the model store, so the viewer can load an export (the engine already loads any OLMo 2
   folder, tied embeddings included; the store currently knows one pinned model).
@@ -159,5 +167,5 @@ Say these plainly in the lesson, once, and keep them in `ATTRIBUTION.md` next to
   phrases.
 - Thermals: a fanless laptop slows down when hot, so the measured speed overestimates. Re-plan after the first
   few minutes if `tok_per_s` drops well below the bench figure.
-- Overnight plans need about 1.3 billion word pieces, about 5 GB of shards plus 2.3 GB downloaded. Show this before
+- Overnight plans need about 1.3 billion word pieces, about 5 GB of shards plus about 2.2 GB downloaded. Show this before
   starting.

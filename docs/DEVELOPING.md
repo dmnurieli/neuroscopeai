@@ -1,6 +1,6 @@
 # Developing NeuroScope
 
-Last updated: 2026-10-29 13:25 EDT
+Last updated: 2026-10-29 13:05 EDT
 
 How the code is laid out, how to build and test it, and the few rules that keep the lessons honest.
 

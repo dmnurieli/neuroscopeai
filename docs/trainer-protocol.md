@@ -52,6 +52,7 @@ the same arguments continues where it stopped. `pretrain` refuses to reuse a run
 
 ## Stopping and exit codes
 
+Send signals to the `pid` in `hello` (the trainer's own Python process, not a `uv` wrapper around it).
 SIGTERM (or SIGINT) asks for a clean stop: the trainer finishes the current step, saves a resumable state, emits a
 `checkpoint` with `kind` `"resume"`, then `done` with `status` `"stopped"`. A second signal stops at once. Exit
 codes: 0 completed, 3 stopped, 1 failed, 2 bad arguments. A failed run emits `error` before `done`.
@@ -132,9 +133,11 @@ Last line. `status` (str: `"completed"`, `"stopped"` or `"failed"`), optional `s
 
 ## Example
 
+Real lines from a 30-minute-plan run (`pretrain --run wiki30 --time 30m`):
+
 ```json
 {"v":1,"event":"hello","t":1793291854.469,"cmd":"pretrain","version":"0.1.0","protocol":1,"pid":17307,"args":{"cmd":"pretrain","run":"wiki30","time":"30m","seed":0}}
-{"v":1,"event":"progress","t":1793291900.1,"cmd":"pretrain","phase":"pretrain","step":1200,"total_steps":22578,"tokens":9830400,"total_tokens":184958976,"loss":5.91,"lr":0.003,"tok_per_s":118000.0,"elapsed_s":83.2,"eta_s":1484.0,"grad_norm":0.41}
-{"v":1,"event":"sample","t":1793291901.0,"cmd":"pretrain","phase":"pretrain","step":1129,"tokens":9248768,"prompt_id":0,"prompt":"The capital of France is","text":" the city of the city of ...","kind":"plain"}
-{"v":1,"event":"done","t":1793293500.0,"cmd":"pretrain","status":"completed"}
+{"v":1,"event":"sample","t":1793292388.642,"cmd":"pretrain","phase":"pretrain","step":7902,"tokens":64733184,"prompt_id":3,"prompt":"The river flows","text":" through the river flows through the river flows towards the river flows through the river flows through the rivers and into rivers. The river flows through the river flows through rivers, rivers and rivers. After an initial","kind":"plain"}
+{"v":1,"event":"progress","t":1793292476.43,"cmd":"pretrain","phase":"pretrain","step":9253,"total_steps":22578,"tokens":75800576,"total_tokens":184958976,"loss":4.7613,"lr":0.00215193,"tok_per_s":102849.4,"elapsed_s":614.1,"eta_s":1061.3,"grad_norm":0.8073}
+{"v":1,"event":"done","t":1793293393.945,"cmd":"pretrain","status":"completed"}
 ```
