@@ -1,0 +1,346 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 440" width="1200" height="440" role="img" aria-label="NeuroScope AI: an airline network guesses a flight delay, then blame walks backward">
+<defs>
+<pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#F2EDE0" opacity="0.07"/></pattern>
+<linearGradient id="fade" x1="0" x2="1"><stop offset="0" stop-color="#05070D" stop-opacity="1"/><stop offset="0.45" stop-color="#05070D" stop-opacity="0.2"/><stop offset="1" stop-color="#05070D" stop-opacity="0"/></linearGradient>
+<radialGradient id="glowA"><stop offset="0" stop-color="#FF9E33" stop-opacity="0.45"/><stop offset="1" stop-color="#FF9E33" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="1200" height="440" rx="18" fill="#05070D"/>
+<rect width="1200" height="440" rx="18" fill="url(#dots)"/>
+<path id="r00" d="M762,118 C822,118 818,118 878,118" fill="none" stroke="#FF9E33" stroke-width="3.66" stroke-opacity="0.38" stroke-linecap="round">
+<animate attributeName="stroke-width" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.7667;0.8333;0.9667;1.0000" values="3.66;3.66;4.58;4.58;3.66" />
+</path>
+<path id="r01" d="M762,118 C822,118 818,188 878,188" fill="none" stroke="#FF9E33" stroke-width="1.46" stroke-opacity="0.38" stroke-linecap="round">
+<animate attributeName="stroke-width" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.7667;0.8333;0.9667;1.0000" values="1.46;1.46;1.82;1.82;1.46" />
+</path>
+<path id="r02" d="M762,118 C822,118 818,258 878,258" fill="none" stroke="#40BFFF" stroke-width="1.68" stroke-opacity="0.38" stroke-dasharray="5 5" stroke-linecap="round">
+<animate attributeName="stroke-width" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.7667;0.8333;0.9667;1.0000" values="1.68;1.68;1.68;1.68;1.68" />
+</path>
+<path id="r03" d="M762,118 C822,118 818,328 878,328" fill="none" stroke="#FF9E33" stroke-width="2.12" stroke-opacity="0.38" stroke-linecap="round">
+<animate attributeName="stroke-width" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.7667;0.8333;0.9667;1.0000" values="2.12;2.12;2.12;2.12;2.12" />
+</path>
+<path id="r10" d="M762,188 C822,188 818,118 878,118" fill="none" stroke="#FF9E33" stroke-width="3.22" stroke-opacity="0.38" stroke-linecap="round">
+<animate attributeName="stroke-width" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.7667;0.8333;0.9667;1.0000" values="3.22;3.22;4.03;4.03;3.22" />
+</path>
+<path id="r11" d="M762,188 C822,188 818,188 878,188" fill="none" stroke="#40BFFF" stroke-width="2.34" stroke-opacity="0.38" stroke-dasharray="5 5" stroke-linecap="round">
+<animate attributeName="stroke-width" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.7667;0.8333;0.9667;1.0000" values="2.34;2.34;2.34;2.34;2.34" />
+</path>
+<path id="r12" d="M762,188 C822,188 818,258 878,258" fill="none" stroke="#FF9E33" stroke-width="1.79" stroke-opacity="0.38" stroke-linecap="round">
+<animate attributeName="stroke-width" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.7667;0.8333;0.9667;1.0000" values="1.79;1.79;2.24;2.24;1.79" />
+</path>
+<path id="r13" d="M762,188 C822,188 818,328 878,328" fill="none" stroke="#40BFFF" stroke-width="1.35" stroke-opacity="0.38" stroke-dasharray="5 5" stroke-linecap="round">
+<animate attributeName="stroke-width" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.7667;0.8333;0.9667;1.0000" values="1.35;1.35;1.35;1.35;1.35" />
+</path>
+<path id="r20" d="M762,258 C822,258 818,118 878,118" fill="none" stroke="#40BFFF" stroke-width="1.46" stroke-opacity="0.38" stroke-dasharray="5 5" stroke-linecap="round">
+<animate attributeName="stroke-width" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.7667;0.8333;0.9667;1.0000" values="1.46;1.46;1.46;1.46;1.46" />
+</path>
+<path id="r21" d="M762,258 C822,258 818,188 878,188" fill="none" stroke="#FF9E33" stroke-width="2.78" stroke-opacity="0.38" stroke-linecap="round">
+<animate attributeName="stroke-width" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.7667;0.8333;0.9667;1.0000" values="2.78;2.78;3.48;3.48;2.78" />
+</path>
+<path id="r22" d="M762,258 C822,258 818,258 878,258" fill="none" stroke="#FF9E33" stroke-width="1.24" stroke-opacity="0.38" stroke-linecap="round">
+<animate attributeName="stroke-width" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.7667;0.8333;0.9667;1.0000" values="1.24;1.24;1.55;1.55;1.24" />
+</path>
+<path id="r23" d="M762,258 C822,258 818,328 878,328" fill="none" stroke="#40BFFF" stroke-width="2.56" stroke-opacity="0.38" stroke-dasharray="5 5" stroke-linecap="round">
+<animate attributeName="stroke-width" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.7667;0.8333;0.9667;1.0000" values="2.56;2.56;2.56;2.56;2.56" />
+</path>
+<path id="r30" d="M762,328 C822,328 818,118 878,118" fill="none" stroke="#FF9E33" stroke-width="1.57" stroke-opacity="0.38" stroke-linecap="round">
+<animate attributeName="stroke-width" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.7667;0.8333;0.9667;1.0000" values="1.57;1.57;1.96;1.96;1.57" />
+</path>
+<path id="r31" d="M762,328 C822,328 818,188 878,188" fill="none" stroke="#40BFFF" stroke-width="1.79" stroke-opacity="0.38" stroke-dasharray="5 5" stroke-linecap="round">
+<animate attributeName="stroke-width" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.7667;0.8333;0.9667;1.0000" values="1.79;1.79;1.79;1.79;1.79" />
+</path>
+<path id="r32" d="M762,328 C822,328 818,258 878,258" fill="none" stroke="#FF9E33" stroke-width="2.56" stroke-opacity="0.38" stroke-linecap="round">
+<animate attributeName="stroke-width" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.7667;0.8333;0.9667;1.0000" values="2.56;2.56;3.20;3.20;2.56" />
+</path>
+<path id="r33" d="M762,328 C822,328 818,328 878,328" fill="none" stroke="#FF9E33" stroke-width="1.13" stroke-opacity="0.38" stroke-linecap="round">
+<animate attributeName="stroke-width" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.7667;0.8333;0.9667;1.0000" values="1.13;1.13;1.13;1.13;1.13" />
+</path>
+<path id="g0" d="M922,118 C972,118 916.0,223 966.0,223" fill="none" stroke="#FF9E33" stroke-width="3.88" stroke-opacity="0.5" stroke-linecap="round"/>
+<path id="g1" d="M922,188 C972,188 916.0,223 966.0,223" fill="none" stroke="#FF9E33" stroke-width="2.32" stroke-opacity="0.5" stroke-linecap="round"/>
+<path id="g2" d="M922,258 C972,258 916.0,223 966.0,223" fill="none" stroke="#40BFFF" stroke-width="2.56" stroke-opacity="0.5" stroke-dasharray="5 5" stroke-linecap="round"/>
+<path id="g3" d="M922,328 C972,328 916.0,223 966.0,223" fill="none" stroke="#FF9E33" stroke-width="1.48" stroke-opacity="0.5" stroke-linecap="round"/>
+<circle r="3.2" fill="#FF9E33" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.0500;0.2417;1"><mpath href="#r00"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.0500;0.0583;0.2333;0.2417;1.0000" values="0;0;0.95;0.95;0;0" />
+</circle>
+<circle r="3.2" fill="#FF9E33" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.0800;0.2717;1"><mpath href="#r00"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.0800;0.0883;0.2633;0.2717;1.0000" values="0;0;0.95;0.95;0;0" />
+</circle>
+<circle r="2.4" fill="#FF9E33" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.0500;0.2417;1"><mpath href="#r01"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.0500;0.0583;0.2333;0.2417;1.0000" values="0;0;0.95;0.95;0;0" />
+</circle>
+<circle r="2.4" fill="#FF9E33" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.0800;0.2717;1"><mpath href="#r01"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.0800;0.0883;0.2633;0.2717;1.0000" values="0;0;0.95;0.95;0;0" />
+</circle>
+<circle r="2.5" fill="#40BFFF" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.0500;0.2417;1"><mpath href="#r02"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.0500;0.0583;0.2333;0.2417;1.0000" values="0;0;0.95;0.95;0;0" />
+</circle>
+<circle r="2.5" fill="#40BFFF" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.0800;0.2717;1"><mpath href="#r02"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.0800;0.0883;0.2633;0.2717;1.0000" values="0;0;0.95;0.95;0;0" />
+</circle>
+<circle r="2.7" fill="#FF9E33" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.0500;0.2417;1"><mpath href="#r03"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.0500;0.0583;0.2333;0.2417;1.0000" values="0;0;0.95;0.95;0;0" />
+</circle>
+<circle r="2.7" fill="#FF9E33" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.0800;0.2717;1"><mpath href="#r03"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.0800;0.0883;0.2633;0.2717;1.0000" values="0;0;0.95;0.95;0;0" />
+</circle>
+<circle r="3.1" fill="#FF9E33" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.0583;0.2500;1"><mpath href="#r10"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.0583;0.0667;0.2417;0.2500;1.0000" values="0;0;0.95;0.95;0;0" />
+</circle>
+<circle r="3.1" fill="#FF9E33" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.0883;0.2800;1"><mpath href="#r10"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.0883;0.0967;0.2717;0.2800;1.0000" values="0;0;0.95;0.95;0;0" />
+</circle>
+<circle r="2.8" fill="#40BFFF" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.0583;0.2500;1"><mpath href="#r11"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.0583;0.0667;0.2417;0.2500;1.0000" values="0;0;0.95;0.95;0;0" />
+</circle>
+<circle r="2.8" fill="#40BFFF" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.0883;0.2800;1"><mpath href="#r11"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.0883;0.0967;0.2717;0.2800;1.0000" values="0;0;0.95;0.95;0;0" />
+</circle>
+<circle r="2.6" fill="#FF9E33" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.0583;0.2500;1"><mpath href="#r12"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.0583;0.0667;0.2417;0.2500;1.0000" values="0;0;0.95;0.95;0;0" />
+</circle>
+<circle r="2.6" fill="#FF9E33" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.0883;0.2800;1"><mpath href="#r12"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.0883;0.0967;0.2717;0.2800;1.0000" values="0;0;0.95;0.95;0;0" />
+</circle>
+<circle r="2.4" fill="#40BFFF" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.0583;0.2500;1"><mpath href="#r13"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.0583;0.0667;0.2417;0.2500;1.0000" values="0;0;0.95;0.95;0;0" />
+</circle>
+<circle r="2.4" fill="#40BFFF" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.0883;0.2800;1"><mpath href="#r13"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.0883;0.0967;0.2717;0.2800;1.0000" values="0;0;0.95;0.95;0;0" />
+</circle>
+<circle r="2.4" fill="#40BFFF" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.0667;0.2583;1"><mpath href="#r20"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.0667;0.0750;0.2500;0.2583;1.0000" values="0;0;0.95;0.95;0;0" />
+</circle>
+<circle r="2.4" fill="#40BFFF" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.0967;0.2883;1"><mpath href="#r20"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.0967;0.1050;0.2800;0.2883;1.0000" values="0;0;0.95;0.95;0;0" />
+</circle>
+<circle r="2.9" fill="#FF9E33" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.0667;0.2583;1"><mpath href="#r21"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.0667;0.0750;0.2500;0.2583;1.0000" values="0;0;0.95;0.95;0;0" />
+</circle>
+<circle r="2.9" fill="#FF9E33" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.0967;0.2883;1"><mpath href="#r21"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.0967;0.1050;0.2800;0.2883;1.0000" values="0;0;0.95;0.95;0;0" />
+</circle>
+<circle r="2.4" fill="#FF9E33" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.0667;0.2583;1"><mpath href="#r22"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.0667;0.0750;0.2500;0.2583;1.0000" values="0;0;0.95;0.95;0;0" />
+</circle>
+<circle r="2.4" fill="#FF9E33" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.0967;0.2883;1"><mpath href="#r22"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.0967;0.1050;0.2800;0.2883;1.0000" values="0;0;0.95;0.95;0;0" />
+</circle>
+<circle r="2.5" fill="#FF9E33" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.0750;0.2667;1"><mpath href="#r30"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.0750;0.0833;0.2583;0.2667;1.0000" values="0;0;0.95;0.95;0;0" />
+</circle>
+<circle r="2.5" fill="#FF9E33" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.1050;0.2967;1"><mpath href="#r30"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.1050;0.1133;0.2883;0.2967;1.0000" values="0;0;0.95;0.95;0;0" />
+</circle>
+<circle r="2.6" fill="#40BFFF" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.0750;0.2667;1"><mpath href="#r31"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.0750;0.0833;0.2583;0.2667;1.0000" values="0;0;0.95;0.95;0;0" />
+</circle>
+<circle r="2.6" fill="#40BFFF" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.1050;0.2967;1"><mpath href="#r31"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.1050;0.1133;0.2883;0.2967;1.0000" values="0;0;0.95;0.95;0;0" />
+</circle>
+<circle r="2.8" fill="#FF9E33" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.0750;0.2667;1"><mpath href="#r32"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.0750;0.0833;0.2583;0.2667;1.0000" values="0;0;0.95;0.95;0;0" />
+</circle>
+<circle r="2.8" fill="#FF9E33" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.1050;0.2967;1"><mpath href="#r32"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.1050;0.1133;0.2883;0.2967;1.0000" values="0;0;0.95;0.95;0;0" />
+</circle>
+<circle r="2.3" fill="#FF9E33" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.0750;0.2667;1"><mpath href="#r33"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.0750;0.0833;0.2583;0.2667;1.0000" values="0;0;0.95;0.95;0;0" />
+</circle>
+<circle r="2.3" fill="#FF9E33" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.1050;0.2967;1"><mpath href="#r33"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.1050;0.1133;0.2883;0.2967;1.0000" values="0;0;0.95;0.95;0;0" />
+</circle>
+<circle r="3.4" fill="#FF9E33" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.2667;0.4083;1"><mpath href="#g0"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.2667;0.2750;0.4000;0.4083;1.0000" values="0;0;1;1;0;0" />
+</circle>
+<circle r="3.4" fill="#FF9E33" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.2917;0.4333;1"><mpath href="#g0"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.2917;0.3000;0.4250;0.4333;1.0000" values="0;0;1;1;0;0" />
+</circle>
+<circle r="3.4" fill="#FF9E33" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.3167;0.4583;1"><mpath href="#g0"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.3167;0.3250;0.4500;0.4583;1.0000" values="0;0;1;1;0;0" />
+</circle>
+<circle r="3.4" fill="#FF9E33" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.2667;0.4083;1"><mpath href="#g1"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.2667;0.2750;0.4000;0.4083;1.0000" values="0;0;1;1;0;0" />
+</circle>
+<circle r="3.4" fill="#FF9E33" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.2917;0.4333;1"><mpath href="#g1"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.2917;0.3000;0.4250;0.4333;1.0000" values="0;0;1;1;0;0" />
+</circle>
+<circle r="3.4" fill="#FF9E33" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.3167;0.4583;1"><mpath href="#g1"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.3167;0.3250;0.4500;0.4583;1.0000" values="0;0;1;1;0;0" />
+</circle>
+<circle r="3.4" fill="#40BFFF" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.2667;0.4083;1"><mpath href="#g2"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.2667;0.2750;0.4000;0.4083;1.0000" values="0;0;1;1;0;0" />
+</circle>
+<circle r="3.4" fill="#40BFFF" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.2917;0.4333;1"><mpath href="#g2"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.2917;0.3000;0.4250;0.4333;1.0000" values="0;0;1;1;0;0" />
+</circle>
+<circle r="3.4" fill="#40BFFF" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.3167;0.4583;1"><mpath href="#g2"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.3167;0.3250;0.4500;0.4583;1.0000" values="0;0;1;1;0;0" />
+</circle>
+<circle r="4.5" fill="#E0323F" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="1;1;0;0" keyTimes="0;0.5500;0.6667;1"><mpath href="#g0"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.5500;0.5583;0.6600;0.6667;1.0000" values="0;0;1;1;0;0" />
+</circle>
+<circle r="3" fill="#E0323F" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="1;1;0;0" keyTimes="0;0.6750;0.8000;1"><mpath href="#r00"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.6750;0.6833;0.7933;0.8000;1.0000" values="0;0;0.9;0.9;0;0" />
+</circle>
+<circle r="3" fill="#E0323F" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="1;1;0;0" keyTimes="0;0.6750;0.8000;1"><mpath href="#r10"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.6750;0.6833;0.7933;0.8000;1.0000" values="0;0;0.9;0.9;0;0" />
+</circle>
+<circle r="3" fill="#E0323F" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="1;1;0;0" keyTimes="0;0.6750;0.8000;1"><mpath href="#r20"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.6750;0.6833;0.7933;0.8000;1.0000" values="0;0;0.9;0.9;0;0" />
+</circle>
+<circle r="3" fill="#E0323F" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="1;1;0;0" keyTimes="0;0.6750;0.8000;1"><mpath href="#r30"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.6750;0.6833;0.7933;0.8000;1.0000" values="0;0;0.9;0.9;0;0" />
+</circle>
+<circle r="4.5" fill="#E0323F" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="1;1;0;0" keyTimes="0;0.5500;0.6667;1"><mpath href="#g1"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.5500;0.5583;0.6600;0.6667;1.0000" values="0;0;1;1;0;0" />
+</circle>
+<circle r="3" fill="#E0323F" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="1;1;0;0" keyTimes="0;0.6750;0.8000;1"><mpath href="#r01"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.6750;0.6833;0.7933;0.8000;1.0000" values="0;0;0.9;0.9;0;0" />
+</circle>
+<circle r="3" fill="#E0323F" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="1;1;0;0" keyTimes="0;0.6750;0.8000;1"><mpath href="#r11"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.6750;0.6833;0.7933;0.8000;1.0000" values="0;0;0.9;0.9;0;0" />
+</circle>
+<circle r="3" fill="#E0323F" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="1;1;0;0" keyTimes="0;0.6750;0.8000;1"><mpath href="#r21"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.6750;0.6833;0.7933;0.8000;1.0000" values="0;0;0.9;0.9;0;0" />
+</circle>
+<circle r="3" fill="#E0323F" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="1;1;0;0" keyTimes="0;0.6750;0.8000;1"><mpath href="#r31"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.6750;0.6833;0.7933;0.8000;1.0000" values="0;0;0.9;0.9;0;0" />
+</circle>
+<circle r="4.5" fill="#E0323F" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="1;1;0;0" keyTimes="0;0.5500;0.6667;1"><mpath href="#g2"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.5500;0.5583;0.6600;0.6667;1.0000" values="0;0;1;1;0;0" />
+</circle>
+<circle r="3" fill="#E0323F" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="1;1;0;0" keyTimes="0;0.6750;0.8000;1"><mpath href="#r02"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.6750;0.6833;0.7933;0.8000;1.0000" values="0;0;0.9;0.9;0;0" />
+</circle>
+<circle r="3" fill="#E0323F" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="1;1;0;0" keyTimes="0;0.6750;0.8000;1"><mpath href="#r12"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.6750;0.6833;0.7933;0.8000;1.0000" values="0;0;0.9;0.9;0;0" />
+</circle>
+<circle r="3" fill="#E0323F" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="1;1;0;0" keyTimes="0;0.6750;0.8000;1"><mpath href="#r22"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.6750;0.6833;0.7933;0.8000;1.0000" values="0;0;0.9;0.9;0;0" />
+</circle>
+<circle r="3" fill="#E0323F" opacity="0">
+<animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="1;1;0;0" keyTimes="0;0.6750;0.8000;1"><mpath href="#r32"/></animateMotion>
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.6750;0.6833;0.7933;0.8000;1.0000" values="0;0;0.9;0.9;0;0" />
+</circle>
+<text x="628" y="84" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="600" letter-spacing="1.6" fill="#9AA3B5">CLIPBOARD</text>
+<rect x="628" y="102" width="134" height="32" rx="7" fill="#0F1219" stroke="#262C3A"/>
+<text x="640" y="123" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#9AA3B5">rain</text>
+<text x="752" y="123" text-anchor="end" font-family="'SF Mono', ui-monospace, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12.5" font-weight="600" fill="#F2EDE0">2.0 in</text>
+<rect x="628" y="172" width="134" height="32" rx="7" fill="#0F1219" stroke="#262C3A"/>
+<text x="640" y="193" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#9AA3B5">wind</text>
+<text x="752" y="193" text-anchor="end" font-family="'SF Mono', ui-monospace, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12.5" font-weight="600" fill="#F2EDE0">49 mph</text>
+<rect x="628" y="242" width="134" height="32" rx="7" fill="#0F1219" stroke="#262C3A"/>
+<text x="640" y="263" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#9AA3B5">staff</text>
+<text x="752" y="263" text-anchor="end" font-family="'SF Mono', ui-monospace, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12.5" font-weight="600" fill="#F2EDE0">6 on duty</text>
+<rect x="628" y="312" width="134" height="32" rx="7" fill="#0F1219" stroke="#262C3A"/>
+<text x="640" y="333" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#9AA3B5">holiday</text>
+<text x="752" y="333" text-anchor="end" font-family="'SF Mono', ui-monospace, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12.5" font-weight="600" fill="#F2EDE0">yes</text>
+<text x="900" y="84" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="600" letter-spacing="1.6" fill="#9AA3B5">HUBS</text>
+<circle cx="900" cy="118" r="38" fill="url(#glowA)" opacity="0">
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.2250;0.2667;0.4833;0.5333;1.0000" values="0;0;1.0;1.0;0;0" />
+</circle>
+<circle cx="900" cy="118" r="22" fill="#2A3040" stroke="#3A4254" stroke-width="1.5">
+<animate attributeName="fill" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.2250;0.2667;0.9000;0.9667;1.0000" values="#2A3040;#2A3040;#FF9E33;#FF9E33;#2A3040;#2A3040" />
+<animate attributeName="stroke" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.6500;0.6667;0.8167;0.8667;1.0000" values="#3A4254;#3A4254;#E0323F;#E0323F;#3A4254;#3A4254" />
+<animate attributeName="stroke-width" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.6500;0.6667;0.8167;0.8667;1.0000" values="1.5;1.5;4;4;1.5;1.5" />
+</circle>
+<text x="900" y="122.5" text-anchor="middle" font-family="'SF Mono', ui-monospace, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" font-weight="700" fill="#0B0E15">ATL</text>
+<circle cx="900" cy="188" r="38" fill="url(#glowA)" opacity="0">
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.2250;0.2667;0.4833;0.5333;1.0000" values="0;0;0.55;0.55;0;0" />
+</circle>
+<circle cx="900" cy="188" r="22" fill="#2A3040" stroke="#3A4254" stroke-width="1.5">
+<animate attributeName="fill" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.2250;0.2667;0.9000;0.9667;1.0000" values="#2A3040;#2A3040;#C9873F;#C9873F;#2A3040;#2A3040" />
+<animate attributeName="stroke" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.6500;0.6667;0.8167;0.8667;1.0000" values="#3A4254;#3A4254;#E0323F;#E0323F;#3A4254;#3A4254" />
+<animate attributeName="stroke-width" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.6500;0.6667;0.8167;0.8667;1.0000" values="1.5;1.5;4;4;1.5;1.5" />
+</circle>
+<text x="900" y="192.5" text-anchor="middle" font-family="'SF Mono', ui-monospace, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" font-weight="700" fill="#0B0E15">ORD</text>
+<circle cx="900" cy="258" r="38" fill="url(#glowA)" opacity="0">
+<animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.2250;0.2667;0.4833;0.5333;1.0000" values="0;0;0.8;0.8;0;0" />
+</circle>
+<circle cx="900" cy="258" r="22" fill="#2A3040" stroke="#3A4254" stroke-width="1.5">
+<animate attributeName="fill" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.2250;0.2667;0.9000;0.9667;1.0000" values="#2A3040;#2A3040;#FF9E33;#FF9E33;#2A3040;#2A3040" />
+<animate attributeName="stroke" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.6500;0.6667;0.8167;0.8667;1.0000" values="#3A4254;#3A4254;#E0323F;#E0323F;#3A4254;#3A4254" />
+<animate attributeName="stroke-width" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.6500;0.6667;0.8167;0.8667;1.0000" values="1.5;1.5;4;4;1.5;1.5" />
+</circle>
+<text x="900" y="262.5" text-anchor="middle" font-family="'SF Mono', ui-monospace, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" font-weight="700" fill="#0B0E15">DFW</text>
+<circle cx="900" cy="328" r="38" fill="url(#glowA)" opacity="0">
+</circle>
+<circle cx="900" cy="328" r="22" fill="#2A3040" stroke="#3A4254" stroke-width="1.5">
+<animate attributeName="fill" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.2250;0.2667;0.9000;0.9667;1.0000" values="#2A3040;#2A3040;#2A3040;#2A3040;#2A3040;#2A3040" />
+</circle>
+<text x="900" y="332.5" text-anchor="middle" font-family="'SF Mono', ui-monospace, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12" font-weight="700" fill="#0B0E15">DEN</text>
+<g opacity="0"><animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.2500;0.2833;0.9000;0.9500;1.0000" values="0;0;1;1;0;0" /><rect x="926" y="297" width="22" height="16" rx="8" fill="#0F1219" stroke="#3A4254"/><text x="937" y="309" text-anchor="middle" font-family="'SF Mono', ui-monospace, Menlo, Consolas, 'Liberation Mono', monospace" font-size="10.5" fill="#F2EDE0">0</text></g>
+<text x="1030" y="172.0" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="600" letter-spacing="1.6" fill="#9AA3B5">GATE SAN</text>
+<rect x="966.0" y="186.0" width="128" height="74" rx="12" fill="#0F1219" stroke="#2E3546"/>
+<text x="1030" y="225" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" fill="#9AA3B5" opacity="1"><animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.3833;0.4083;0.9500;0.9833;1.0000" values="1;1;0;0;1;1" />how late?</text>
+<text x="1030" y="231" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="27" font-weight="600" fill="#F2EDE0" opacity="0"><animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.3917;0.3933;0.4167;0.4183;1.0000" values="0;0;1;1;0;0" />12 min</text>
+<text x="1030" y="231" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="27" font-weight="600" fill="#F2EDE0" opacity="0"><animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.4167;0.4183;0.4417;0.4433;1.0000" values="0;0;1;1;0;0" />21 min</text>
+<text x="1030" y="231" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="27" font-weight="600" fill="#F2EDE0" opacity="0"><animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.4417;0.4433;0.9500;0.9517;1.0000" values="0;0;1;1;0;0" />33 min</text>
+<g opacity="0"><animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0.0000;0.4917;0.5250;0.9167;0.9667;1.0000" values="0;0;1;1;0;0" /><text x="1030" y="286.0" text-anchor="middle" font-family="'SF Mono', ui-monospace, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12.5" fill="#9AA3B5">really 231 min</text><text x="1030" y="306.0" text-anchor="middle" font-family="'SF Mono', ui-monospace, Menlo, Consolas, 'Liberation Mono', monospace" font-size="12.5" font-weight="700" fill="#E0323F">off by 198 → blame</text></g>
+<rect x="0" y="0" width="640" height="440" rx="18" fill="url(#fade)"/>
+<text x="64" y="118" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="2.4" fill="#FF9E33">✈  NEURAL NETWORKS, CLEARED FOR TAKEOFF</text>
+<text x="60" y="196" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="68" font-weight="700" letter-spacing="-1.5" fill="#F2EDE0">NeuroScope AI</text>
+<text x="64" y="244" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="23" fill="#F2EDE0" opacity="0.92">Build a neural network out of an airline.</text>
+<text x="64" y="276" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="23" fill="#9AA3B5">Watch it learn. Then look inside a real AI.</text>
+<rect x="64" y="318" width="101" height="30" rx="15" fill="none" stroke="#73CCB3" stroke-opacity="0.65"/>
+<circle cx="78" cy="333" r="3.5" fill="#73CCB3"/>
+<text x="88" y="338" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#F2EDE0">no algebra</text>
+<rect x="177.0" y="318" width="151" height="30" rx="15" fill="none" stroke="#FF9E33" stroke-opacity="0.65"/>
+<circle cx="191.0" cy="333" r="3.5" fill="#FF9E33"/>
+<text x="201.0" y="338" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#F2EDE0">runs on your Mac</text>
+<rect x="339.8" y="318" width="151" height="30" rx="15" fill="none" stroke="#40BFFF" stroke-opacity="0.65"/>
+<circle cx="353.8" cy="333" r="3.5" fill="#40BFFF"/>
+<text x="363.8" y="338" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" fill="#F2EDE0">fully open model</text>
+</svg>
