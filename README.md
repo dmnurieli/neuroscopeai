@@ -346,6 +346,9 @@ Contributions are welcome, especially from people who teach.
 Read [docs/DEVELOPING.md](docs/DEVELOPING.md) first. One rule matters above the others: every number a lesson shows
 is computed, never typed.
 
+How to send a change: [CONTRIBUTING.md](CONTRIBUTING.md). This README is updated by hand as features land, so please
+leave it out of pull requests and mention anything it should say in your description instead.
+
 ## Credits
 
 - [OLMo 2](https://allenai.org/olmo) by Ai2 (Apache 2.0): the model, its training stages and its open data.
