@@ -174,7 +174,7 @@ These are the flights we want to run next. Each one is open for contributors: pi
 boarding, and we'll work out the route together.
 
 <p align="center">
-  <img src="docs/images/roadmap.svg" width="100%" alt="Upcoming departures board: AI tutor, vision, embeddings, speech, post-training, wiki AI, related work, more models, translations, and your own lesson, all seeking crew except the wiki AI, which is in the hangar">
+  <img src="docs/images/roadmap.svg" width="100%" alt="Upcoming departures board: AI tutor, vision, embeddings, speech, post-training, wiki AI, related work, Windows and Linux, more models, translations, and your own lesson, all seeking crew except the wiki AI, which is in the hangar">
 </p>
 
 - **AI tutor: bring your own key.** Paste an Anthropic, OpenAI or OpenRouter API key, and a tutor appears beside the
@@ -198,9 +198,15 @@ boarding, and we'll work out the route together.
   removed, and why that matters for safety.
 - **Wiki AI: train your own** *(in the hangar)*. Train a ~50M-parameter model shaped like OLMo 2 on about a billion
   words of Wikipedia; watch it go from gibberish to words to sentences, then open your own model in the neuron
-  viewer. Training-speed benchmarks are running now.
+  viewer. First benchmark: about five hours per billion word pieces on a Mac Studio, with MLX.
 - **Related work: borrow the best.** Learn from the projects below: link to them from the right lessons, borrow
   their best ideas, and say what each one does better.
+- **Windows and Linux: port the cockpit.** The engine is Rust on candle, which already runs on Windows and Linux
+  (with CUDA or on the CPU). What's Mac-only is the cockpit: the SwiftUI interface and the Metal neuron field. A port
+  means a cross-platform interface (Tauri, egui or a web UI, say), a portable renderer for the 3D field (wgpu), the
+  engine switched to candle's CUDA/CPU backends, and installers people can just download. The airline network
+  (`AirlineKit`) is small, pure, unit-tested Swift that's easy to carry over. We won't get to this ourselves soon;
+  it's yours if you want it.
 - **More models**, **translations** of the course, and **your own lesson**. If you can explain one idea better than
   we do, that's a lesson.
 
