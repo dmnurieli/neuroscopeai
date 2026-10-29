@@ -190,8 +190,10 @@ together.
 ### Language models
 
 - **Train your own** *(in progress)*. Train a ~50M-parameter model shaped like OLMo 2 on about a billion words of
-  Wikipedia, watch it go from gibberish to words to sentences, then open your own model in the neuron viewer. First
-  benchmark: about five hours per billion word pieces on a Mac Studio, with MLX.
+  Wikipedia, watch it go from gibberish to words to sentences, then open your own model in the neuron viewer. The
+  training engine is built (`trainer/`, MLX): you pick how long you want to wait, it measures your Mac and sizes the
+  run to fit. Its first 30-minute run went from `_ALL compliantanteed.getDeclared` to "It was the capital of
+  France." The in-app lesson is next.
 - **Embeddings.** Take a huge pile of text, give every word a place on a map, and watch words used alike drift
   together as it trains. It's the first step of pretraining a language model, and the idea behind search and
   recommendations.
