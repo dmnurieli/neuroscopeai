@@ -18,12 +18,15 @@ model ([OLMo 2 1B](https://allenai.org/olmo)), running on your own Mac, and look
 
 No algebra. No canned animations: every number on screen comes from a real network training live.
 
+The airline course is where it begins, not where it ends: NeuroScope AI is growing into an open school for AI, from
+your first network to vision, speech and language models you train yourself. See [Upcoming additions](#upcoming-additions).
+
 <p align="center">
   <img src="docs/images/forward-pass.gif" width="88%" alt="A flight-delay network draws in, passengers flow through the hubs, and the gate guesses 33 min late">
 </p>
 
 **[Install](#install-and-run)** · **[The route](#the-route)** · **[Inside a real AI](#inside-a-real-ai)** ·
-**[Upcoming departures](#upcoming-departures-crew-wanted)** · **[Contributing](#contributing)**
+**[Upcoming additions](#upcoming-additions)** · **[Contributing](#contributing)**
 
 ## The idea
 
@@ -168,47 +171,80 @@ SwiftUI + Metal app (app/)          the lessons, the airline map, the 3D neuron 
 Developer notes and the rules that keep the lessons honest: [docs/DEVELOPING.md](docs/DEVELOPING.md). The
 lesson-by-lesson spec: [docs/airline-course.md](docs/airline-course.md).
 
-## Upcoming departures: crew wanted
+## Upcoming additions
 
-These are the flights we want to run next. Each one is open for contributors: pick one, open an issue to say you're
-boarding, and we'll work out the route together.
+The airline course is the core, and where everyone starts. But NeuroScope AI isn't an airline app. It's meant to
+become a free, open school for AI: taking everyday people from no algebra and not a single line of code to real
+expertise in everything AI can do. It has two halves: a **web portal** to
+learn anywhere (coming soon), and this **app**, where you build real, useful models of your own that run privately
+on your machine.
+
+From the train-your-own stage onward, the lessons branch out to new examples. Here is what's planned. Everything
+marked open is waiting for someone to build it: pick one, open an issue to say you're on it, and we'll shape it
+together.
 
 <p align="center">
-  <img src="docs/images/roadmap.svg" width="100%" alt="Upcoming departures board: AI tutor, vision, embeddings, speech, post-training, wiki AI, related work, Windows and Linux, more models, translations, and your own lesson, all seeking crew except the wiki AI, which is in the hangar">
+  <img src="docs/images/additions-map.svg" width="100%" alt="Upcoming additions, from no algebra to expert: the airline course is the trunk; tracks branch into language models (graduation, train your own, embeddings, post-training), vision detection (face recognition, object recognition, open-vocabulary detection), vision classification and image generation, speech (recognition and voice models), and the platform (web portal, AI tutor, Windows and Linux, translations)">
 </p>
 
+### Language models
+
+- **Train your own** *(in progress)*. Train a ~50M-parameter model shaped like OLMo 2 on about a billion words of
+  Wikipedia, watch it go from gibberish to words to sentences, then open your own model in the neuron viewer. First
+  benchmark: about five hours per billion word pieces on a Mac Studio, with MLX.
+- **Embeddings.** Take a huge pile of text, give every word a place on a map, and watch words used alike drift
+  together as it trains. It's the first step of pretraining a language model, and the idea behind search and
+  recommendations.
+- **Post-training.** Everything done after pretraining to make a model behave a certain way: fine-tuning on examples
+  (SFT, LoRA), preference tuning (DPO), and direction editing such as steering and **abliteration**, which finds
+  one direction inside the model and removes it from the weights. Specialise an open-weight model for a field like
+  cybersecurity, give it a house voice, or see how a refusal lives in a single direction, what changes when it's
+  removed, and why that matters for safety.
+
+### Vision: detection
+
+- **Face recognition.** Build a model that recognises people from a webcam or a security camera feed, and see how it
+  turns a face into a list of numbers it can compare. Consent is part of the lesson: you enroll only people who
+  agreed, and everything runs on your own machine.
+- **Object recognition.** Find and box everyday objects in a live camera frame, and see what each layer learned to
+  look for.
+- **Open-vocabulary detection.** Models that find anything you can describe in words ("a red backpack", "a dog on
+  the couch") by joining an image network to a language network.
+
+### Vision: sort and make
+
+- **Classification.** Teach a model your own categories (photos, documents, support messages, recorded calls) and
+  learn when to trust its answers.
+- **Image generation.** How a picture is made from pure noise, one clean-up step at a time (diffusion), and how a
+  sentence steers it.
+
+### Speech
+
+- **Speech recognition.** How a network turns sound, drawn as a picture called a spectrogram, into words.
+- **Voice models.** Not just using or cloning a voice, but the network that makes one: from text to sound, and what
+  makes a voice sound like a particular person (cloning only with that person's consent).
+
+### Platform
+
+- **Web portal** *(coming soon)*. The full course in a browser, with exercises and saved progress. The app stays
+  the place to build your own private models.
 - **AI tutor: bring your own key.** Paste an Anthropic, OpenAI or OpenRouter API key, and a tutor appears beside the
   lesson. The hard part isn't the API call, it's the teaching. The tutor must behave like the app: answer the
-  question that was asked, in two or three sentences; one idea at a time; point at what's on screen right now (this
-  hub, that route, the number on the gate); use the airline word first and the real term once; ask one question back
-  instead of offering a menu; never a wall of text. Most unguided chatbots ramble, and a learner who has to wade
-  through paragraphs loses the thread. Wanted: provider adapters, the lesson-state context the tutor sees, and a set
-  of real learner questions to test that answers stay short and on point. Keys should live in the macOS Keychain.
-- **Vision: spot the luggage.** A lesson that trains a small image network, say one that spots bags on a baggage
-  belt, and shows what its filters learn to look for, the way the airline course shows what hubs learn.
-- **Embeddings: words on a map.** Take a big pile of text, give every word an airport on a map, and watch words used
-  alike drift together as it trains. This is the first step of pretraining a language model, made visible.
-- **Speech: hear the tower.** Not just using a voice model, but seeing inside one: how a network turns a radio call
-  from the tower into text, and how another turns text back into a voice. Sound as a picture, then the network that
-  reads it.
-- **Post-training: shape a model.** Everything that happens after pretraining to make a model behave a certain way:
-  fine-tuning on examples (SFT, LoRA), preference tuning (DPO), and direction editing like **abliteration** (the
-  app's "erase French", made permanent in the weights). Specialise an open-weight model for a field like
-  cybersecurity, give it a house voice, or see how a refusal lives in a single direction and what changes when it's
-  removed, and why that matters for safety.
-- **Wiki AI: train your own** *(in the hangar)*. Train a ~50M-parameter model shaped like OLMo 2 on about a billion
-  words of Wikipedia; watch it go from gibberish to words to sentences, then open your own model in the neuron
-  viewer. First benchmark: about five hours per billion word pieces on a Mac Studio, with MLX.
-- **Related work: borrow the best.** Learn from the projects below: link to them from the right lessons, borrow
-  their best ideas, and say what each one does better.
-- **Windows and Linux: port the cockpit.** The engine is Rust on candle, which already runs on Windows and Linux
-  (with CUDA or on the CPU). What's Mac-only is the cockpit: the SwiftUI interface and the Metal neuron field. A port
-  means a cross-platform interface (Tauri, egui or a web UI, say), a portable renderer for the 3D field (wgpu), the
-  engine switched to candle's CUDA/CPU backends, and installers people can just download. The airline network
-  (`AirlineKit`) is small, pure, unit-tested Swift that's easy to carry over. We won't get to this ourselves soon;
-  it's yours if you want it.
-- **More models**, **translations** of the course, and **your own lesson**. If you can explain one idea better than
-  we do, that's a lesson.
+  question that was asked, in two or three sentences; one idea at a time; point at what's on screen right now; use
+  the everyday word first and the real term once; ask one question back instead of offering a menu; never a wall of
+  text. Most unguided chatbots ramble, and a learner who has to wade through paragraphs loses the thread. Wanted:
+  provider adapters, the lesson context the tutor sees, and a set of real learner questions to test that answers
+  stay short and on point. Keys should live in the macOS Keychain.
+- **Windows and Linux.** The engine is Rust on candle, which already runs on Windows and Linux (with CUDA or on the
+  CPU). What's Mac-only is the interface: SwiftUI and the Metal neuron field. A port means a cross-platform
+  interface (Tauri, egui or a web UI, say), a portable renderer for the 3D field (wgpu), the engine switched to
+  candle's CUDA or CPU backends, and installers people can just download. The airline network (`AirlineKit`) is
+  small, pure, unit-tested Swift that's easy to carry over. We won't get to this ourselves soon; it's yours if you
+  want it.
+- **Learn from the best.** The projects below each do something better than we do. Link to them from the right
+  lessons and borrow their best ideas.
+- **Translations**, **more open models**, and **your own lesson**. If you can explain one idea better than we do,
+  that's a lesson.
 
 ## Related projects
 
@@ -232,7 +268,7 @@ Contributions are welcome, especially from people who teach.
 
 - **A better explanation.** If a lesson page lost you, that's a bug. Open an issue with the page and what confused
   you.
-- **A flight from the board above**, or a lesson of your own.
+- **Anything marked open in [Upcoming additions](#upcoming-additions)**, or a lesson of your own.
 - **Engine work**: more open models, faster capture, new kinds of edits.
 
 Read [docs/DEVELOPING.md](docs/DEVELOPING.md) first. One rule matters above the others: every number a lesson shows
