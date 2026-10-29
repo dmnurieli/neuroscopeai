@@ -1,0 +1,27 @@
+[package]
+name = "neuroscope-engine"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+name = "neuroscope_engine"
+crate-type = ["staticlib", "rlib"]
+
+[dependencies]
+candle-core = { version = "0.11", features = ["metal"] }
+candle-nn = { version = "0.11", features = ["metal"] }
+tokenizers = { version = "0.23", default-features = false, features = ["onig"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+anyhow = "1"
+half = "2.7"
+rand = "0.10"
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 4
+panic = "unwind"
+
+[profile.dev.package."*"]
+opt-level = 3

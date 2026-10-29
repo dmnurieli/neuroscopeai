@@ -1,0 +1,22 @@
+[package]
+name = "stage-record"
+version = "0.1.0"
+edition = "2024"
+publish = false
+
+# Records the graduation lesson's fixed prompts on one OLMo 2 1B stage (see ../record.sh). Builds against the
+# app's own engine, so the recordings come from the same code path the app runs (bf16 on Metal).
+
+[dependencies]
+neuroscope-engine = { path = "../../../engine" }
+serde_json = "1"
+anyhow = "1"
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 4
+panic = "unwind"
+
+[profile.dev.package."*"]
+opt-level = 3

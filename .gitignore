@@ -1,0 +1,11 @@
+# build outputs
+build/
+engine/target
+app/.build/
+app/.swiftpm/
+.DS_Store
+# model weights never live in the repo (the app downloads them to ~/Library/Application Support/NeuroScope/models)
+*.safetensors
+*.gguf
+.venv/
+__pycache__/

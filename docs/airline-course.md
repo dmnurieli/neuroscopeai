@@ -1,0 +1,93 @@
+# Airline course — lesson spec
+
+Last updated: 2026-10-29 10:30 EDT
+
+The course a non-technical learner walks: a neural network taught as an airline network, with no algebra.
+Every page: one sentence, one button, plain English (the real term bolded once with its plain meaning beside
+it), numbers read live from AirlineKit, the camera frames only what the sentence is about, motion renders a real
+variable, a key press skips to the end state, Reduce Motion cuts to it.
+
+## Order on Home ("Start here")
+0. **Your first network** (built): one flight → guess → loss → the backprop walk → practice → an unseen flight.
+1. **The rulebook** · 2. **The clipboard** · 3. **Direct routes** · 4. **Layover hubs** · 5. **The foggy mountain**
+6. **Name your hubs** · 7. **Exam day** · 8. **Close a route** · 9. **Graduation** (OLMo 2 1B, recorded + live).
+Lessons unlock in order; after lesson 4 the **Builder** opens on Home (the same map, no rails).
+
+## 1. The rulebook
+- p1 "Before networks, programmers wrote **rules** by hand: if this, then that." One example rule shown as a card:
+  *If wind is above 30 mph, add 60 minutes.*
+- p2 The rulebook editor: up to 3 rules, each up to 2 conditions joined by AND, pickers only (fact, above/below,
+  number, minutes). A live score on the quiz pile (2023): "Your rules are off by N min on average." Two reference
+  bars beside it: *Everyone on time* and *Your rules*. Starts with `Rulebook.beginner` filled in.
+- p3 The 29-mph flight: the app finds a quiz flight where wind is 25–30 mph, it rained ≥ 1 in, staff was short and
+  it was ≥ 90 min late; no rule fired. "Wind was 29, not 30, so your rule stayed quiet. It was really N min late."
+- p4 "Rules miss the in-between cases, and the combinations." Counter: 8 facts → 28 pairs → 56 triples, each with
+  its own thresholds.
+- p5 "A network finds the combinations by itself, from the logbook." A third bar labelled *A network* shows "?"
+  (filled in after lesson 4). Done.
+
+## 2. The clipboard
+- p1 "Everything the network knows about a flight is on the dispatcher's **clipboard**: the **inputs**."
+- p2 The 8 cards; the learner switches cards on and off. Copy: "Which facts would help predict a delay?"
+- p3 The shoe-colour card wobbles: "Would the pilot's shoes matter? Keep it on; let's see what the network decides."
+- p4 "Each fact is turned into the same scale first: how far it is from an ordinary flight." Example: 49 mph wind
+  shown as "far above normal" on a little dial. Done. The chosen set carries into lessons 3–5.
+
+## 3. Direct routes
+- p1 "Simplest network: a route straight from every fact to the gate. No layovers."
+- p2 Train (the Train button, step size fixed). Quiz score falls and flattens (~11 min off).
+- p3 The compound flight: storm AND short staff AND holiday. "Direct routes add rain and wind separately. They can't
+  see that rain AND wind together make a storm." The trace shows each fact's route adding a little, the gate far off.
+- p4 "It needs places where facts meet." Done.
+
+## 4. Layover hubs
+- p1 "Add a row of **hubs**: layover cities where facts meet." The learner presses "+ hub" until 6 (or picks 6).
+- p2 Train. Score falls well below the direct routes (~7).
+- p3 "Add a second row." Train. (~5.8). The rulebook / direct / network bars side by side.
+- p4 Point at the row-1 hub with the highest signed storm correlation on the check year: "This hub lights up on
+  stormy days. Nobody told it to." (Honest wording; the full test is lesson 6.)
+- p5 "That's **deep learning**: deep just means more rows of hubs." Done. Builder unlocks.
+
+## 5. The foggy mountain
+- p1 "Training is a blindfolded hiker on a foggy mountain, feeling for downhill." The mountain view: two routes into
+  one row-1 hub (upstream slice, labelled "a slice: two knobs, the rest held still"), the hiker = the current pair.
+- p2 Step-size slider. Too big: the hiker leaps past the valley (and with a huge stride, tumbles: the tumble guard).
+  Too small: it crawls. Just right: it settles.
+- p3 "Each step: feel the slope, step downhill, take a new flight from the logbook." Done.
+
+## 6. Name your hubs
+Hub cards: what wakes this hub (signed relationship to each concept on the check year), contrasting flights it fires on
+vs ignores, the close-the-hub test on storm flights. Labels "mostly Storm" only when all three agree; else "linked to".
+
+## 7. Exam day
+The quiz pile was 2023; the sealed exam is 2024–2025. A huge network (2×8) aces the study pile and does worse on the
+exam than 2×6: memorising vs understanding.
+
+## 8. Close a route
+Click a route or hub to close it (overlay, no rebuild); the quiz score and the flights that got worse update.
+
+## 9. Graduation
+The bridge from the learner's one-gate network to OLMo 2 1B (allenai, fully open). Pages 1–5 show RECORDINGS made on
+this Mac by the app's own engine (greedy, bf16 Metal, fixed max word pieces) from pinned published stages; the
+app ships text, not weights. Data: `app/Sources/AirlineKit/GraduationRecordings.swift`, generated by
+`scripts/stages/record.sh` (download one stage, record, delete) → `recordings.jsonl` → `to_swift.py`; phrase counts
+in the training text from the public infini-gram index (`scripts/stages/trainingdata.sh`). Every output card carries
+its provenance line ("recorded on this Mac from allenai/OLMo-2-0425-1B-SFT @0d85a3d0, 28 Oct 2026").
+- p1 Bridge: one gate (how late) → a gate with 100,352 word-piece destinations; the base model's real top picks after
+  "…safely on the" fan out, thickness = recorded probability. Embeddings named once ("word airports").
+- p2 Pretraining = hide-and-seek on text. Six stage-1 snapshots (0 / 1B / 21B / 210B / 2.1T / 4T word pieces) continue
+  the same sentence, revealed one at a time; a picker switches to "The capital of France is".
+- p3 The base model (main, after mid-training) continues "How do I bake a chocolate cake?" like a forum page.
+  "Similar text appears in its training data" with the infini-gram count of "bake a chocolate cake".
+- p4 Flight school (SFT, 866,138 example conversations): the same question answered.
+- p5 The check ride (DPO, 378,301 answer pairs) then checkable rewards (RLVR): maths with an answer key (graded live from
+  the recording against the computed 6:15 pm), a false-premise question for sycophancy / reward hacking, the cake.
+- p6 Try it live: the final model (Instruct) answers the learner's question through the engine (its own handle,
+  closed on exit). Optional: download the base model (5.94 GB, pinned commit) to ask it too; a delete button after.
+- p7 Send-off to "Inside a real AI" (same model).
+Completion id `airline-graduation`; unlocks after `airline-close`.
+
+## Shared pieces
+- Lesson shell: one generic caption card + top bar + page dots (LessonPlayer's look), driven by page data.
+- The map supports 0–2 rows of 1–8 hubs and any subset of clipboard cards.
+- Train panel: Train / Pause, step size, quiz-score curve, "flights studied".
