@@ -1,0 +1,28 @@
+[project]
+name = "neuroscope-trainer"
+version = "0.1.0"
+description = "Train a small OLMo 2 style language model on this Mac with MLX, then export it for the NeuroScope viewer."
+requires-python = ">=3.12,<3.14"
+license = "Apache-2.0"
+dependencies = [
+    "mlx==0.32.4",
+    "numpy==2.5.4",
+    "pyarrow==26.0.0",
+    "tokenizers==0.23.3",
+]
+
+[project.scripts]
+neuroscope-train = "neuroscope_trainer.cli:main"
+
+[dependency-groups]
+dev = ["pytest==9.2.0"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/neuroscope_trainer"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

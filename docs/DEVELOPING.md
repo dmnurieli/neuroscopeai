@@ -1,6 +1,6 @@
 # Developing NeuroScope
 
-Last updated: 2026-10-29 10:15 EDT
+Last updated: 2026-10-29 13:25 EDT
 
 How the code is laid out, how to build and test it, and the few rules that keep the lessons honest.
 
@@ -15,10 +15,14 @@ How the code is laid out, how to build and test it, and the few rules that keep 
 | `app/Sources/AirlineKit/` | the airline course's tiny network and its seeded synthetic flight ledger. Pure Swift, no Rust, no UI. `Contract.swift` is the public API the app codes against |
 | `app/Sources/NeuroScope/Airline/` | the airline lessons' UI: the map, the flight card, the lesson shell, every lesson |
 | `app/Tests/AirlineKitTests/` | determinism, a gradient check, the lesson premises, the storm hub, the sealed exam split |
+| `trainer/` | Python + MLX: trains a small OLMo 2 shaped model on this Mac ("Train your own AI"): `bench`, `prepare`, `pretrain`, `sft`, `export`, `compare`. Runs as its own process; talks JSON lines (`docs/trainer-protocol.md`) |
+| `engine/examples/logits.rs` | dumps the engine's next-token logits for a prompt and a few greedy steps (the trainer's `compare` checks them) |
 | `scripts/reference/` | Python reference runs (Hugging Face transformers) the engine is checked against |
 | `scripts/stages/` | records the Graduation lesson's model outputs from published OLMo 2 training stages |
 | `docs/airline-course.md` | the lesson-by-lesson spec of the airline course |
 | `docs/GUIDE.md` | the in-app guide for "Inside a real AI" |
+| `docs/trainer-protocol.md` | the trainer's event protocol: the contract the "Train your own AI" lesson codes against |
+| `docs/plans/` | designs for lessons not built yet (`train-your-own.md`) |
 
 ## Build, run, test
 
@@ -50,6 +54,33 @@ cd engine && cargo test --release --test reference_olmo -- --ignored
 
 `NS_OLMO_DIR` and `NS_OLMO_FIXTURES` point the test at another model folder or fixture prefix; `NS_DTYPE=f32`
 runs the engine in full precision.
+
+### The trainer
+
+Needs [uv](https://docs.astral.sh/uv/); it creates `trainer/.venv` from the pinned `trainer/uv.lock` (Python 3.13
+fetched by uv, never the system Python). Data, runs and exports go to
+`~/Library/Application Support/NeuroScope/training` (`--workdir` or `NEUROSCOPE_TRAIN_DIR` to change).
+
+```sh
+cd trainer
+uv run pytest                                           # unit tests (seconds)
+uv run neuroscope-train bench --time 30m                # measure this Mac, print the plan's derivation
+uv run neuroscope-train prepare --time 30m --sft        # Wikipedia + instruction-tuning set
+uv run neuroscope-train pretrain --run my-model --time 30m
+uv run neuroscope-train sft --run my-model --time 30m
+uv run neuroscope-train export --run my-model-sft      # → .../training/exports/my-model-sft
+```
+
+To check an export against the app's engine (bf16 as the app runs it, and f32 for a tight bound):
+
+```sh
+cd engine
+cargo run --release --example logits -- --model DIR --out /tmp/eng.json "The capital of France is"
+NS_DTYPE=f32 cargo run --release --example logits -- --model DIR --out /tmp/eng32.json "The capital of France is"
+cd ../trainer
+uv run neuroscope-train compare --export DIR --engine /tmp/eng.json
+uv run neuroscope-train compare --export DIR --engine /tmp/eng32.json
+```
 
 ## Changing the C ABI
 

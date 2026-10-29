@@ -750,6 +750,11 @@ pub(crate) mod test_util {
     /// `nl`-layer random model of either family (v 40, hidden 16, N 24, 2 heads × 8; Qwen3 1 kv head,
     /// OLMo 2 2 kv heads with head_dim left out of config.json, untied lm_head).
     pub(crate) fn tiny_model(arch: Arch, nl: usize, tag: &str) -> anyhow::Result<(Model, std::path::PathBuf)> {
+        tiny_model_tied(arch, nl, tag, arch == Arch::Qwen3)
+    }
+
+    /// As `tiny_model`, choosing whether the unembedding is tied to embed_tokens (no lm_head.weight on disk).
+    pub(crate) fn tiny_model_tied(arch: Arch, nl: usize, tag: &str, tied: bool) -> anyhow::Result<(Model, std::path::PathBuf)> {
         let (v, h, n, nh, hd) = (40usize, 16usize, 24usize, 2usize, 8usize);
         let nkv = if arch == Arch::Olmo2 { 2 } else { 1 };
         let dir = std::env::temp_dir().join(format!(
@@ -769,7 +774,7 @@ pub(crate) mod test_util {
                 "model_type": "olmo2", "vocab_size": v, "hidden_size": h, "intermediate_size": n,
                 "num_hidden_layers": nl, "num_attention_heads": nh, "num_key_value_heads": nkv,
                 "rms_norm_eps": 1e-6, "rope_theta": 10000.0, "max_position_embeddings": 64,
-                "tie_word_embeddings": false, "attention_bias": false, "hidden_act": "silu", "rope_scaling": null
+                "tie_word_embeddings": tied, "attention_bias": false, "hidden_act": "silu", "rope_scaling": null
             }),
         };
         std::fs::write(dir.join("config.json"), cfg.to_string())?;
@@ -779,7 +784,7 @@ pub(crate) mod test_util {
         let norm = |len: usize| -> candle_core::Result<Tensor> { rnd(&[len], 0.3)? + 1.0 };
         t.insert("model.embed_tokens.weight".into(), rnd(&[v, h], 1.0)?);
         t.insert("model.norm.weight".into(), norm(h)?);
-        if arch == Arch::Olmo2 {
+        if !tied {
             t.insert("lm_head.weight".into(), rnd(&[v, h], 1.0)?);
         }
         for i in 0..nl {
@@ -816,6 +821,33 @@ pub(crate) mod test_util {
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    /// OLMo 2 with tie_word_embeddings (what the trainer in trainer/ exports): loads without lm_head.weight and
+    /// gives the same logits as the untied model whose lm_head is a copy of embed_tokens.
+    #[test]
+    fn olmo2_tied_embeddings_match_an_explicit_copy() -> anyhow::Result<()> {
+        let (mut tied, dir) = test_util::tiny_model_tied(Arch::Olmo2, 2, "tied", true)?;
+        let mut t: std::collections::HashMap<String, Tensor> = candle_core::safetensors::load(dir.join("model.safetensors"), &Device::Cpu)?;
+        assert!(!t.contains_key("lm_head.weight"), "a tied export has no lm_head.weight");
+        t.insert("lm_head.weight".into(), t["model.embed_tokens.weight"].clone());
+        let udir = dir.with_file_name(format!("{}-untied", dir.file_name().unwrap().to_string_lossy()));
+        std::fs::create_dir_all(&udir)?;
+        candle_core::safetensors::save(&t, udir.join("model.safetensors"))?;
+        let cfg_raw = std::fs::read_to_string(dir.join("config.json"))?.replace("\"tie_word_embeddings\":true", "\"tie_word_embeddings\":false");
+        std::fs::write(udir.join("config.json"), &cfg_raw)?;
+        let ucfg = ModelConfig::load(&udir)?;
+        assert!(!ucfg.tie_word_embeddings);
+        let mut untied = Model::load(&ucfg, &udir, &Device::Cpu)?;
+        let ids = [3u32, 17, 5, 29, 11];
+        let edits = DeviceEdits::none(2);
+        let (a, _) = tied.forward(&ids, 0, &edits, false)?;
+        let (b, _) = untied.forward(&ids, 0, &edits, false)?;
+        let max = a.iter().zip(&b).map(|(x, y)| (x - y).abs()).fold(0f32, f32::max);
+        assert!(max < 1e-6, "tied vs untied logits differ by {max}");
+        let _ = std::fs::remove_dir_all(&dir);
+        let _ = std::fs::remove_dir_all(&udir);
+        Ok(())
+    }
 
     #[test]
     #[ignore]
