@@ -18,8 +18,9 @@ model ([OLMo 2 1B](https://allenai.org/olmo)), running on your own Mac, and look
 
 No algebra. No canned animations: every number on screen comes from a real network training live.
 
-The airline course is where it begins, not where it ends: NeuroScope AI is growing into an open school for AI, from
-your first network to vision, speech and language models you train yourself. See [Upcoming additions](#upcoming-additions).
+The airline course is where it begins, not where it ends: NeuroScope AI is growing into an open school and AI lab in
+one, from your first network to training, adapting, shrinking and sharing real models of your own (language, vision
+and speech), on your Mac or on cloud GPUs. See [Upcoming additions](#upcoming-additions).
 
 <p align="center">
   <img src="docs/images/forward-pass.gif" width="88%" alt="A flight-delay network draws in, passengers flow through the hubs, and the gate guesses 33 min late">
@@ -173,35 +174,93 @@ lesson-by-lesson spec: [docs/airline-course.md](docs/airline-course.md).
 
 ## Upcoming additions
 
-The airline course is the core, and where everyone starts. But NeuroScope AI isn't an airline app. It's meant to
-become a free, open school for AI: taking everyday people from no algebra and not a single line of code to real
-expertise in everything AI can do. It has two halves: a **web portal** to
-learn anywhere (coming soon), and this **app**, where you build real, useful models of your own that run privately
-on your machine.
+The airline course is the core, and where everyone starts. But NeuroScope AI isn't an airline app, and it isn't only
+a course. It's meant to become an open school and a working AI lab in one. The lessons take everyday people from no
+algebra and not a single line of code to real expertise. Next to each lesson sit the real tools for the job it
+teaches: train a model from raw text, adapt an open-weight model to your field, shrink it, and share the weights. It
+all runs privately on your own machine, or on rented cloud GPUs when a job outgrows it.
 
-From the train-your-own stage onward, the lessons branch out to new examples. Here is what's planned. Everything
-marked open is waiting for someone to build it: pick one, open an issue to say you're on it, and we'll shape it
-together.
+It has two halves: a **web portal** to learn anywhere (coming soon), and this **app**, where you build. What you
+make here are real weights in standard formats, not screenshots of a model. The trainer's first exports already
+load in Hugging Face transformers.
+
+Here is what's planned. Everything marked open is waiting for someone to build it: pick one, open an issue to say
+you're on it, and we'll shape it together.
 
 <p align="center">
-  <img src="docs/images/additions-map.svg" width="100%" alt="Upcoming additions, from no algebra to expert: the airline course is the trunk; tracks branch into language models (graduation, train your own, embeddings, post-training), vision detection (face recognition, object recognition, open-vocabulary detection), vision classification and image generation, speech (recognition and voice models), and the platform (web portal, AI tutor, Windows and Linux, translations)">
+  <img src="docs/images/additions-map.svg" width="100%" alt="Upcoming additions, from no algebra to a working AI lab: the airline course is the trunk; tracks branch into understanding (graduation, embeddings), training from scratch (train your own, midtraining and long context, SFT and DPO, RL and RLHF), adapting an open model (fine-tuning, specialists, abliteration, house style), shrinking and sharing (number formats, GGUF quants, quantize yours, publish), vision detection (face recognition, object recognition, open-vocabulary detection, your conditions), vision classification and image generation, speech (recognition and voice models), and the platform (web portal, AI tutor, cloud GPUs, Windows and Linux)">
 </p>
 
-### Language models
+### Understand
+
+- **Embeddings.** Take a huge pile of text, give every word a place on a map, and watch words used alike drift
+  together as it trains. It's the first step of pretraining a language model, and the idea behind search and
+  recommendations.
+
+### Train from scratch
+
+The pipeline a lab runs to make a language model, at a size your Mac (or one rented GPU) can finish. Graduation shows
+OLMo 2 after most of these stages; this track lets you run each one yourself, as a lesson and as a tool.
 
 - **Train your own** *(in progress)*. Train a ~50M-parameter model shaped like OLMo 2 on about a billion words of
   Wikipedia, watch it go from gibberish to words to sentences, then open your own model in the neuron viewer. The
   training engine is built (`trainer/`, MLX): you pick how long you want to wait, it measures your Mac and sizes the
   run to fit. Its first 30-minute run went from `_ALL compliantanteed.getDeclared` to "It was the capital of
-  France." The in-app lesson is next.
-- **Embeddings.** Take a huge pile of text, give every word a place on a map, and watch words used alike drift
-  together as it trains. It's the first step of pretraining a language model, and the idea behind search and
-  recommendations.
-- **Post-training.** Everything done after pretraining to make a model behave a certain way: fine-tuning on examples
-  (SFT, LoRA), preference tuning (DPO), and direction editing such as steering and **abliteration**, which finds
-  one direction inside the model and removes it from the weights. Specialise an open-weight model for a field like
-  cybersecurity, give it a house voice, or see how a refusal lives in a single direction, what changes when it's
-  removed, and why that matters for safety.
+  France." The in-app lesson is next. After that: bring your own raw dataset (a text dump, a crawl, your own
+  documents), with the cleaning, de-duplicating, filtering and mixing that turn it into training data.
+- **Midtraining and long context.** After pretraining, a shorter run on the best and most specialised text (math,
+  code, worked answers), which is what OLMo 2's second stage did. Then teach the model to read more at once:
+  train on longer documents and rescale its sense of word position (RoPE) so they fit.
+- **SFT: instruct and thinking.** Supervised fine-tuning on example conversations. Instruct SFT teaches the model
+  to answer; thinking SFT teaches it to reason step by step first, from examples that show their working.
+- **Preference tuning (DPO).** Show the model two answers to the same question, one better than the other, and
+  nudge it toward the better one, with no separate scoring model. For instruct and thinking models alike.
+- **Reinforcement learning and RLHF.** Training on rewards: from a reward model that learned what people prefer
+  (RLHF), or from answers a program can check, like a math result or code that passes its tests (RLVR, the way
+  today's reasoning models are trained).
+
+### Adapt an open model
+
+Training a capable model from nothing takes enormous compute, so most real work starts from one that already
+exists. This track points everything above at open-weight language and vision models, with harnesses that do the
+actual job and a before-and-after check on every change.
+
+- **Fine-tuning.** LoRA, QLoRA or full fine-tuning on your own examples, with an evaluation built in so you can see
+  whether the model got better at your task, and what it forgot along the way.
+- **Specialists.** Make a model excel at one field, cybersecurity for example: gather the data, fine-tune, and
+  measure it against the original on questions it has never seen.
+- **House style.** Make a model write and talk a specific way: your tone, your format, your length.
+- **Abliteration and direction editing.** Find one direction inside the model (a refusal, a topic, a tone) and
+  remove it from the weights for good, or steer along it while it writes. See how a refusal lives in a single
+  direction, what changes when it's removed, and why that matters for safety.
+
+### Shrink and share
+
+A model too big for your machine is a model you can't use. **Quantization** stores each weight in fewer bits, and
+the names for the ways of doing it are an alphabet soup. This track teaches it from the bottom up, then hands you
+the tools. It starts small: round the airline network's routes to 8, 4, then 2 bits and watch the minutes-off climb.
+
+- **Number formats, in hardware.** FP32, BF16 and FP16, FP8 (E4M3 and E5M2) and FP4 (MXFP4, NVFP4): how many bits
+  each spends on range and how many on precision, which chips do the math natively, and why GPU servers like
+  [vLLM](https://github.com/vllm-project/vllm) run models in FP8 or FP4 and keep the KV cache (the model's running
+  memory of the conversation) in FP8. You fit more users on each GPU, and the lesson measures what that costs in
+  quality.
+- **GGUF and llama.cpp quants, decoded.** GGUF is the single-file model format behind
+  [llama.cpp](https://github.com/ggml-org/llama.cpp), Ollama and LM Studio. In a name like `Q4_K_M`, the number
+  is roughly the bits per weight. `_0` stores one scale for each block of 32 weights, and `_1` a scale and an
+  offset. `K` (k-quants) nests those blocks inside 256-weight super-blocks with scales of their own. `IQ`
+  (i-quants) picks weights from codebooks of good patterns. Helped by an importance matrix (which weights matter
+  most, measured on sample text), they stay usable below 4 bits. `S`, `M` and `L` (or `XS` and `XXS`) say how many
+  of the most sensitive tensors keep extra bits. Alongside them, the GPU-side methods (GPTQ, AWQ) and MLX's own 4-
+  and 8-bit formats. For scale: a 1-billion-weight model is about 2 GB in BF16, about 1 GB in `Q8_0` and about
+  0.6 GB in `Q4_K_M`.
+- **Quantize your own.** In the app, take a model you trained or adapted, make `Q8_0`, `Q4_K_M` and smaller
+  versions of it, and compare them side by side. You see the size, the speed, the quality (perplexity on held-out
+  text, and the same questions answered by each), and, in the neuron viewer, which desks drift as the bits go. A
+  head start: the app's engine library, candle, can already quantize to the `_0`, `_1` and K types (with an
+  importance matrix), write GGUF and run it on Metal. I-quants would come from llama.cpp's own tools.
+- **Publish.** Share what you build: export as safetensors or GGUF and publish to Hugging Face from the app, with a
+  model card that records how it was trained, on what, and how it scored.
 
 ### Vision: detection
 
@@ -212,6 +271,9 @@ together.
   look for.
 - **Open-vocabulary detection.** Models that find anything you can describe in words ("a red backpack", "a dog on
   the couch") by joining an image network to a language network.
+- **Your conditions.** Adapt an open detector or classifier to where the camera actually is: a low-res, badly
+  angled warehouse camera, fog, night, glare. Label frames from the real feed, fine-tune, and measure on that
+  feed, not on a benchmark.
 
 ### Vision: sort and make
 
@@ -237,6 +299,12 @@ together.
   text. Most unguided chatbots ramble, and a learner who has to wade through paragraphs loses the thread. Wanted:
   provider adapters, the lesson context the tutor sees, and a set of real learner questions to test that answers
   stay short and on point. Keys should live in the macOS Keychain.
+- **Cloud GPUs.** When a job outgrows your machine, run the same tools on rented GPUs: RunPod, Google Colab, or any
+  NVIDIA machine you can reach over SSH. The app plans the run, shows the time and cost up front, launches it,
+  streams progress back into the lesson, and brings the weights home. The trainer already reports progress as JSON
+  lines from its own process ([docs/trainer-protocol.md](docs/trainer-protocol.md)), so a remote runner can speak
+  the same protocol. What's missing is a CUDA backend for the trainer (it's MLX today) and a runner for each
+  provider.
 - **Windows and Linux.** The engine is Rust on candle, which already runs on Windows and Linux (with CUDA or on the
   CPU). What's Mac-only is the interface: SwiftUI and the Metal neuron field. A port means a cross-platform
   interface (Tauri, egui or a web UI, say), a portable renderer for the 3D field (wgpu), the engine switched to
@@ -271,6 +339,8 @@ Contributions are welcome, especially from people who teach.
 - **A better explanation.** If a lesson page lost you, that's a bug. Open an issue with the page and what confused
   you.
 - **Anything marked open in [Upcoming additions](#upcoming-additions)**, or a lesson of your own.
+- **Training, fine-tuning and quantization know-how.** If you've trained, adapted or quantized models for real,
+  the lab tracks need you most: the harnesses, and the honest evaluations that show whether a change worked.
 - **Engine work**: more open models, faster capture, new kinds of edits.
 
 Read [docs/DEVELOPING.md](docs/DEVELOPING.md) first. One rule matters above the others: every number a lesson shows

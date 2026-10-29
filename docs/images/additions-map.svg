@@ -1,114 +1,175 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 682" width="1200" height="682" role="img" aria-label="Upcoming additions: from no algebra and no code to expert. The airline course is the trunk; tracks branch into language models, vision, speech and the platform.">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 916" width="1200" height="916" role="img" aria-label="Upcoming additions: from no algebra and no code to expert. The airline course is the trunk; tracks branch into understanding models, training from scratch, adapting open models, quantizing and sharing, vision, speech and the platform.">
 <style>
 .ants{animation:ants 1.6s linear infinite}@keyframes ants{to{stroke-dashoffset:-18}}
 </style>
 <defs><pattern id="g" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#F2EDE0" opacity="0.06"/></pattern><radialGradient id="glow"><stop offset="0" stop-color="#FF9E33" stop-opacity="0.35"/><stop offset="1" stop-color="#FF9E33" stop-opacity="0"/></radialGradient></defs>
-<rect width="1200" height="682" rx="18" fill="#05070D"/><rect width="1200" height="682" rx="18" fill="url(#g)"/>
+<rect width="1200" height="916" rx="18" fill="#05070D"/><rect width="1200" height="916" rx="18" fill="url(#g)"/>
 <text x="44" y="60" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="2.4" fill="#FF9E33">UPCOMING ADDITIONS</text>
-<text x="44" y="92" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="25" font-weight="600" fill="#F2EDE0">From no algebra to expert. The airline is where it begins.</text>
+<text x="44" y="92" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="25" font-weight="600" fill="#F2EDE0">From no algebra to a working AI lab. The airline is where it begins.</text>
 <text x="470" y="128" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="600" letter-spacing="1.6" fill="#8A93A6">FIRST STEPS</text>
 <text x="1160" y="128" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="600" letter-spacing="1.6" fill="#8A93A6">EXPERT</text>
 <line x1="562" x2="1100" y1="124" y2="124" stroke="#8A93A6" stroke-opacity="0.35" stroke-dasharray="2 6"/>
 <path d="M1096,119 L1104,124 L1096,129" fill="none" stroke="#8A93A6" stroke-opacity="0.6"/>
-<rect x="44" y="351.0" width="124" height="52" rx="26" fill="none" stroke="#F2EDE0" stroke-opacity="0.55"/>
-<text x="106" y="373.0" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#F2EDE0">You</text>
-<text x="106" y="390.0" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" fill="#8A93A6">no algebra, no code</text>
-<line x1="168" x2="198.0" y1="377.0" y2="377.0" stroke="#FF9E33" stroke-width="2"/>
-<path id="b0" d="M394.0,377.0 C464.0,377.0 400,193.0 470,193.0" fill="none" stroke="#FF9E33" stroke-opacity="0.55" stroke-width="2"/>
+<rect x="44" y="468.0" width="124" height="52" rx="26" fill="none" stroke="#F2EDE0" stroke-opacity="0.55"/>
+<text x="106" y="490.0" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="700" fill="#F2EDE0">You</text>
+<text x="106" y="507.0" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" fill="#8A93A6">no algebra, no code</text>
+<line x1="168" x2="198.0" y1="494.0" y2="494.0" stroke="#FF9E33" stroke-width="2"/>
+<path id="b0" d="M394.0,494.0 C464.0,494.0 400,193.0 470,193.0" fill="none" stroke="#FF9E33" stroke-opacity="0.55" stroke-width="2"/>
 <circle r="4" fill="#FF9E33" opacity="0"><animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.000;0.183;1"><mpath href="#b0"/></animateMotion><animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0;0.000;0.008;0.175;0.183;1" values="0;0;1;1;0;0"/></circle>
-<path id="b1" d="M394.0,377.0 C464.0,377.0 400,285.0 470,285.0" fill="none" stroke="#FF9E33" stroke-opacity="0.55" stroke-width="2"/>
+<path id="b1" d="M394.0,494.0 C464.0,494.0 400,279.0 470,279.0" fill="none" stroke="#FF9E33" stroke-opacity="0.55" stroke-width="2"/>
 <circle r="4" fill="#FF9E33" opacity="0"><animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.042;0.225;1"><mpath href="#b1"/></animateMotion><animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0;0.042;0.050;0.217;0.225;1" values="0;0;1;1;0;0"/></circle>
-<path id="b2" d="M394.0,377.0 C464.0,377.0 400,377.0 470,377.0" fill="none" stroke="#FF9E33" stroke-opacity="0.55" stroke-width="2"/>
+<path id="b2" d="M394.0,494.0 C464.0,494.0 400,365.0 470,365.0" fill="none" stroke="#FF9E33" stroke-opacity="0.55" stroke-width="2"/>
 <circle r="4" fill="#FF9E33" opacity="0"><animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.083;0.267;1"><mpath href="#b2"/></animateMotion><animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0;0.083;0.092;0.258;0.267;1" values="0;0;1;1;0;0"/></circle>
-<path id="b3" d="M394.0,377.0 C464.0,377.0 400,469.0 470,469.0" fill="none" stroke="#FF9E33" stroke-opacity="0.55" stroke-width="2"/>
+<path id="b3" d="M394.0,494.0 C464.0,494.0 400,451.0 470,451.0" fill="none" stroke="#FF9E33" stroke-opacity="0.55" stroke-width="2"/>
 <circle r="4" fill="#FF9E33" opacity="0"><animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.125;0.308;1"><mpath href="#b3"/></animateMotion><animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0;0.125;0.133;0.300;0.308;1" values="0;0;1;1;0;0"/></circle>
-<path id="b4" d="M394.0,377.0 C464.0,377.0 400,561.0 470,561.0" fill="none" stroke="#FF9E33" stroke-opacity="0.55" stroke-width="2"/>
+<path id="b4" d="M394.0,494.0 C464.0,494.0 400,537.0 470,537.0" fill="none" stroke="#FF9E33" stroke-opacity="0.55" stroke-width="2"/>
 <circle r="4" fill="#FF9E33" opacity="0"><animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.167;0.350;1"><mpath href="#b4"/></animateMotion><animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0;0.167;0.175;0.342;0.350;1" values="0;0;1;1;0;0"/></circle>
-<circle cx="296" cy="377.0" r="120" fill="url(#glow)"/>
-<rect x="198.0" y="341.0" width="196" height="72" rx="12" fill="#0F1219" stroke="#FF9E33" stroke-width="2.5"/>
-<text x="212.0" y="371.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" font-weight="600" fill="#F2EDE0">The airline course</text>
-<text x="212.0" y="393.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#8A93A6">the core · lessons 0–9</text>
-<text x="212.0" y="331.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="600" letter-spacing="1.6" fill="#73CCB3">FOUNDATIONS · BUILT</text>
-<text x="470" y="159" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.6" fill="#8A93A6">LANGUAGE MODELS</text>
+<path id="b5" d="M394.0,494.0 C464.0,494.0 400,623.0 470,623.0" fill="none" stroke="#FF9E33" stroke-opacity="0.55" stroke-width="2"/>
+<circle r="4" fill="#FF9E33" opacity="0"><animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.208;0.392;1"><mpath href="#b5"/></animateMotion><animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0;0.208;0.217;0.383;0.392;1" values="0;0;1;1;0;0"/></circle>
+<path id="b6" d="M394.0,494.0 C464.0,494.0 400,709.0 470,709.0" fill="none" stroke="#FF9E33" stroke-opacity="0.55" stroke-width="2"/>
+<circle r="4" fill="#FF9E33" opacity="0"><animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.250;0.433;1"><mpath href="#b6"/></animateMotion><animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0;0.250;0.258;0.425;0.433;1" values="0;0;1;1;0;0"/></circle>
+<path id="b7" d="M394.0,494.0 C464.0,494.0 400,795.0 470,795.0" fill="none" stroke="#FF9E33" stroke-opacity="0.55" stroke-width="2"/>
+<circle r="4" fill="#FF9E33" opacity="0"><animateMotion dur="6.0s" repeatCount="indefinite" calcMode="linear" keyPoints="0;0;1;1" keyTimes="0;0.292;0.475;1"><mpath href="#b7"/></animateMotion><animate attributeName="opacity" dur="6.0s" repeatCount="indefinite" keyTimes="0;0.292;0.300;0.467;0.475;1" values="0;0;1;1;0;0"/></circle>
+<circle cx="296" cy="494.0" r="120" fill="url(#glow)"/>
+<rect x="198.0" y="458.0" width="196" height="72" rx="12" fill="#0F1219" stroke="#FF9E33" stroke-width="2.5"/>
+<text x="212.0" y="488.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" font-weight="600" fill="#F2EDE0">The airline course</text>
+<text x="212.0" y="510.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#8A93A6">the core · lessons 0–9</text>
+<text x="212.0" y="448.0" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="600" letter-spacing="1.6" fill="#73CCB3">FOUNDATIONS · BUILT</text>
+<text x="470" y="159" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.6" fill="#8A93A6">UNDERSTAND</text>
 <rect x="470" y="168" width="162" height="50" rx="12" fill="#0F1219" stroke="#73CCB3" stroke-width="1.6"/>
 <text x="484" y="189" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#F2EDE0">Graduation</text>
 <text x="484" y="206" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8A93A6">OLMo 2 1B, inside out</text>
 <text x="620" y="188" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#73CCB3">●</text>
 <line x1="632" x2="644" y1="193.0" y2="193.0" stroke="#8A93A6" stroke-opacity="0.5"/><path d="M639,189.0 L644,193.0 L639,197.0" fill="none" stroke="#8A93A6" stroke-opacity="0.7"/>
-<rect x="648" y="168" width="162" height="50" rx="12" fill="#0F1219" stroke="#5FB8FF" stroke-width="1.6"/>
-<text x="662" y="189" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#F2EDE0">Train your own</text>
-<text x="662" y="206" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8A93A6">a wiki AI from scratch</text>
-<text x="798" y="188" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#5FB8FF">◐</text>
-<line x1="810" x2="822" y1="193.0" y2="193.0" stroke="#8A93A6" stroke-opacity="0.5"/><path d="M817,189.0 L822,193.0 L817,197.0" fill="none" stroke="#8A93A6" stroke-opacity="0.7"/>
-<rect x="826" y="168" width="162" height="50" rx="12" fill="#0F1219" stroke="#4A5366" stroke-width="1.6" class="ants" stroke-dasharray="6 3"/>
-<text x="840" y="189" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#F2EDE0">Embeddings</text>
-<text x="840" y="206" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8A93A6">words on a map</text>
-<text x="976" y="188" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#4A5366">○</text>
-<line x1="988" x2="1000" y1="193.0" y2="193.0" stroke="#8A93A6" stroke-opacity="0.5"/><path d="M995,189.0 L1000,193.0 L995,197.0" fill="none" stroke="#8A93A6" stroke-opacity="0.7"/>
-<rect x="1004" y="168" width="162" height="50" rx="12" fill="#0F1219" stroke="#4A5366" stroke-width="1.6" class="ants" stroke-dasharray="6 3"/>
-<text x="1018" y="189" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#F2EDE0">Post-training</text>
-<text x="1018" y="206" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8A93A6">fine-tune, steer, edit</text>
-<text x="1154" y="188" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#4A5366">○</text>
-<text x="470" y="251" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.6" fill="#8A93A6">VISION · DETECT</text>
-<rect x="470" y="260" width="162" height="50" rx="12" fill="#0F1219" stroke="#4A5366" stroke-width="1.6" class="ants" stroke-dasharray="6 3"/>
-<text x="484" y="281" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#F2EDE0">Face recognition</text>
-<text x="484" y="298" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8A93A6">webcams, security cams</text>
-<text x="620" y="280" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#4A5366">○</text>
-<line x1="632" x2="644" y1="285.0" y2="285.0" stroke="#8A93A6" stroke-opacity="0.5"/><path d="M639,281.0 L644,285.0 L639,289.0" fill="none" stroke="#8A93A6" stroke-opacity="0.7"/>
-<rect x="648" y="260" width="162" height="50" rx="12" fill="#0F1219" stroke="#4A5366" stroke-width="1.6" class="ants" stroke-dasharray="6 3"/>
-<text x="662" y="281" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#F2EDE0">Object recognition</text>
-<text x="662" y="298" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8A93A6">what's in the frame</text>
-<text x="798" y="280" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#4A5366">○</text>
-<line x1="810" x2="822" y1="285.0" y2="285.0" stroke="#8A93A6" stroke-opacity="0.5"/><path d="M817,281.0 L822,285.0 L817,289.0" fill="none" stroke="#8A93A6" stroke-opacity="0.7"/>
-<rect x="826" y="260" width="162" height="50" rx="12" fill="#0F1219" stroke="#4A5366" stroke-width="1.6" class="ants" stroke-dasharray="6 3"/>
-<text x="840" y="281" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#F2EDE0">Open-vocabulary</text>
-<text x="840" y="298" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8A93A6">find anything you name</text>
-<text x="976" y="280" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#4A5366">○</text>
-<text x="470" y="343" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.6" fill="#8A93A6">VISION · SORT &amp; MAKE</text>
-<rect x="470" y="352" width="162" height="50" rx="12" fill="#0F1219" stroke="#4A5366" stroke-width="1.6" class="ants" stroke-dasharray="6 3"/>
-<text x="484" y="373" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#F2EDE0">Classification</text>
-<text x="484" y="390" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8A93A6">your own categories</text>
-<text x="620" y="372" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#4A5366">○</text>
-<line x1="632" x2="644" y1="377.0" y2="377.0" stroke="#8A93A6" stroke-opacity="0.5"/><path d="M639,373.0 L644,377.0 L639,381.0" fill="none" stroke="#8A93A6" stroke-opacity="0.7"/>
-<rect x="648" y="352" width="162" height="50" rx="12" fill="#0F1219" stroke="#4A5366" stroke-width="1.6" class="ants" stroke-dasharray="6 3"/>
-<text x="662" y="373" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#F2EDE0">Image generation</text>
-<text x="662" y="390" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8A93A6">from noise to a picture</text>
-<text x="798" y="372" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#4A5366">○</text>
-<text x="470" y="435" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.6" fill="#8A93A6">SPEECH</text>
-<rect x="470" y="444" width="162" height="50" rx="12" fill="#0F1219" stroke="#4A5366" stroke-width="1.6" class="ants" stroke-dasharray="6 3"/>
-<text x="484" y="465" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#F2EDE0">Speech recognition</text>
-<text x="484" y="482" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8A93A6">sound in, words out</text>
-<text x="620" y="464" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#4A5366">○</text>
-<line x1="632" x2="644" y1="469.0" y2="469.0" stroke="#8A93A6" stroke-opacity="0.5"/><path d="M639,465.0 L644,469.0 L639,473.0" fill="none" stroke="#8A93A6" stroke-opacity="0.7"/>
-<rect x="648" y="444" width="162" height="50" rx="12" fill="#0F1219" stroke="#4A5366" stroke-width="1.6" class="ants" stroke-dasharray="6 3"/>
-<text x="662" y="465" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#F2EDE0">Voice models</text>
-<text x="662" y="482" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8A93A6">the net behind a voice</text>
-<text x="798" y="464" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#4A5366">○</text>
-<text x="470" y="527" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.6" fill="#8A93A6">PLATFORM</text>
-<rect x="470" y="536" width="162" height="50" rx="12" fill="#0F1219" stroke="#5FB8FF" stroke-width="1.6"/>
-<text x="484" y="557" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#F2EDE0">Web portal</text>
-<text x="484" y="574" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8A93A6">the course, in a browser</text>
-<text x="620" y="556" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#5FB8FF">◐</text>
-<line x1="632" x2="644" y1="561.0" y2="561.0" stroke="#8A93A6" stroke-opacity="0.5"/><path d="M639,557.0 L644,561.0 L639,565.0" fill="none" stroke="#8A93A6" stroke-opacity="0.7"/>
-<rect x="648" y="536" width="162" height="50" rx="12" fill="#0F1219" stroke="#4A5366" stroke-width="1.6" class="ants" stroke-dasharray="6 3"/>
-<text x="662" y="557" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#F2EDE0">AI tutor</text>
-<text x="662" y="574" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8A93A6">bring your own API key</text>
-<text x="798" y="556" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#4A5366">○</text>
-<line x1="810" x2="822" y1="561.0" y2="561.0" stroke="#8A93A6" stroke-opacity="0.5"/><path d="M817,557.0 L822,561.0 L817,565.0" fill="none" stroke="#8A93A6" stroke-opacity="0.7"/>
-<rect x="826" y="536" width="162" height="50" rx="12" fill="#0F1219" stroke="#4A5366" stroke-width="1.6" class="ants" stroke-dasharray="6 3"/>
-<text x="840" y="557" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#F2EDE0">Windows + Linux</text>
-<text x="840" y="574" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8A93A6">port the app</text>
-<text x="976" y="556" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#4A5366">○</text>
-<line x1="988" x2="1000" y1="561.0" y2="561.0" stroke="#8A93A6" stroke-opacity="0.5"/><path d="M995,557.0 L1000,561.0 L995,565.0" fill="none" stroke="#8A93A6" stroke-opacity="0.7"/>
-<rect x="1004" y="536" width="162" height="50" rx="12" fill="#0F1219" stroke="#4A5366" stroke-width="1.6" class="ants" stroke-dasharray="6 3"/>
-<text x="1018" y="557" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#F2EDE0">Translations</text>
-<text x="1018" y="574" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8A93A6">every language</text>
-<text x="1154" y="556" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#4A5366">○</text>
-<text x="44" y="642" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#73CCB3">●</text>
-<text x="62" y="642" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#8A93A6">built</text>
-<text x="110.0" y="642" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#5FB8FF">◐</text>
-<text x="128.0" y="642" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#8A93A6">in progress / coming soon</text>
-<text x="320.0" y="642" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#4A5366">○</text>
-<text x="338.0" y="642" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#8A93A6">open for contributors</text>
-<text x="1156" y="642" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#8A93A6">Learn on the web · build real, private models in the app</text>
+<rect x="648" y="168" width="162" height="50" rx="12" fill="#0F1219" stroke="#4A5366" stroke-width="1.6" class="ants" stroke-dasharray="6 3"/>
+<text x="662" y="189" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#F2EDE0">Embeddings</text>
+<text x="662" y="206" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8A93A6">words on a map</text>
+<text x="798" y="188" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#4A5366">○</text>
+<text x="470" y="245" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.6" fill="#8A93A6">TRAIN FROM SCRATCH</text>
+<rect x="470" y="254" width="162" height="50" rx="12" fill="#0F1219" stroke="#5FB8FF" stroke-width="1.6"/>
+<text x="484" y="275" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#F2EDE0">Train your own</text>
+<text x="484" y="292" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8A93A6">raw text to a chat model</text>
+<text x="620" y="274" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#5FB8FF">◐</text>
+<line x1="632" x2="644" y1="279.0" y2="279.0" stroke="#8A93A6" stroke-opacity="0.5"/><path d="M639,275.0 L644,279.0 L639,283.0" fill="none" stroke="#8A93A6" stroke-opacity="0.7"/>
+<rect x="648" y="254" width="162" height="50" rx="12" fill="#0F1219" stroke="#4A5366" stroke-width="1.6" class="ants" stroke-dasharray="6 3"/>
+<text x="662" y="275" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#F2EDE0">Mid + long context</text>
+<text x="662" y="292" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8A93A6">better data, longer reads</text>
+<text x="798" y="274" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#4A5366">○</text>
+<line x1="810" x2="822" y1="279.0" y2="279.0" stroke="#8A93A6" stroke-opacity="0.5"/><path d="M817,275.0 L822,279.0 L817,283.0" fill="none" stroke="#8A93A6" stroke-opacity="0.7"/>
+<rect x="826" y="254" width="162" height="50" rx="12" fill="#0F1219" stroke="#4A5366" stroke-width="1.6" class="ants" stroke-dasharray="6 3"/>
+<text x="840" y="275" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#F2EDE0">SFT + DPO</text>
+<text x="840" y="292" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8A93A6">instruct and thinking</text>
+<text x="976" y="274" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#4A5366">○</text>
+<line x1="988" x2="1000" y1="279.0" y2="279.0" stroke="#8A93A6" stroke-opacity="0.5"/><path d="M995,275.0 L1000,279.0 L995,283.0" fill="none" stroke="#8A93A6" stroke-opacity="0.7"/>
+<rect x="1004" y="254" width="162" height="50" rx="12" fill="#0F1219" stroke="#4A5366" stroke-width="1.6" class="ants" stroke-dasharray="6 3"/>
+<text x="1018" y="275" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#F2EDE0">RL + RLHF</text>
+<text x="1018" y="292" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8A93A6">rewards, human taste</text>
+<text x="1154" y="274" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#4A5366">○</text>
+<text x="470" y="331" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.6" fill="#8A93A6">ADAPT AN OPEN MODEL</text>
+<rect x="470" y="340" width="162" height="50" rx="12" fill="#0F1219" stroke="#4A5366" stroke-width="1.6" class="ants" stroke-dasharray="6 3"/>
+<text x="484" y="361" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#F2EDE0">Fine-tuning</text>
+<text x="484" y="378" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8A93A6">LoRA to full, your data</text>
+<text x="620" y="360" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#4A5366">○</text>
+<line x1="632" x2="644" y1="365.0" y2="365.0" stroke="#8A93A6" stroke-opacity="0.5"/><path d="M639,361.0 L644,365.0 L639,369.0" fill="none" stroke="#8A93A6" stroke-opacity="0.7"/>
+<rect x="648" y="340" width="162" height="50" rx="12" fill="#0F1219" stroke="#4A5366" stroke-width="1.6" class="ants" stroke-dasharray="6 3"/>
+<text x="662" y="361" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#F2EDE0">Specialists</text>
+<text x="662" y="378" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8A93A6">e.g. cybersecurity</text>
+<text x="798" y="360" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#4A5366">○</text>
+<line x1="810" x2="822" y1="365.0" y2="365.0" stroke="#8A93A6" stroke-opacity="0.5"/><path d="M817,361.0 L822,365.0 L817,369.0" fill="none" stroke="#8A93A6" stroke-opacity="0.7"/>
+<rect x="826" y="340" width="162" height="50" rx="12" fill="#0F1219" stroke="#4A5366" stroke-width="1.6" class="ants" stroke-dasharray="6 3"/>
+<text x="840" y="361" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#F2EDE0">Abliteration</text>
+<text x="840" y="378" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8A93A6">remove a direction</text>
+<text x="976" y="360" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#4A5366">○</text>
+<line x1="988" x2="1000" y1="365.0" y2="365.0" stroke="#8A93A6" stroke-opacity="0.5"/><path d="M995,361.0 L1000,365.0 L995,369.0" fill="none" stroke="#8A93A6" stroke-opacity="0.7"/>
+<rect x="1004" y="340" width="162" height="50" rx="12" fill="#0F1219" stroke="#4A5366" stroke-width="1.6" class="ants" stroke-dasharray="6 3"/>
+<text x="1018" y="361" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#F2EDE0">House style</text>
+<text x="1018" y="378" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8A93A6">talk your way</text>
+<text x="1154" y="360" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#4A5366">○</text>
+<text x="470" y="417" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.6" fill="#8A93A6">SHRINK + SHARE</text>
+<rect x="470" y="426" width="162" height="50" rx="12" fill="#0F1219" stroke="#4A5366" stroke-width="1.6" class="ants" stroke-dasharray="6 3"/>
+<text x="484" y="447" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#F2EDE0">Number formats</text>
+<text x="484" y="464" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8A93A6">BF16 · FP8 · FP4</text>
+<text x="620" y="446" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#4A5366">○</text>
+<line x1="632" x2="644" y1="451.0" y2="451.0" stroke="#8A93A6" stroke-opacity="0.5"/><path d="M639,447.0 L644,451.0 L639,455.0" fill="none" stroke="#8A93A6" stroke-opacity="0.7"/>
+<rect x="648" y="426" width="162" height="50" rx="12" fill="#0F1219" stroke="#4A5366" stroke-width="1.6" class="ants" stroke-dasharray="6 3"/>
+<text x="662" y="447" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#F2EDE0">GGUF quants</text>
+<text x="662" y="464" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8A93A6">Q8_0 · Q4_K_M · IQ3</text>
+<text x="798" y="446" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#4A5366">○</text>
+<line x1="810" x2="822" y1="451.0" y2="451.0" stroke="#8A93A6" stroke-opacity="0.5"/><path d="M817,447.0 L822,451.0 L817,455.0" fill="none" stroke="#8A93A6" stroke-opacity="0.7"/>
+<rect x="826" y="426" width="162" height="50" rx="12" fill="#0F1219" stroke="#4A5366" stroke-width="1.6" class="ants" stroke-dasharray="6 3"/>
+<text x="840" y="447" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#F2EDE0">Quantize yours</text>
+<text x="840" y="464" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8A93A6">shrink it, compare it</text>
+<text x="976" y="446" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#4A5366">○</text>
+<line x1="988" x2="1000" y1="451.0" y2="451.0" stroke="#8A93A6" stroke-opacity="0.5"/><path d="M995,447.0 L1000,451.0 L995,455.0" fill="none" stroke="#8A93A6" stroke-opacity="0.7"/>
+<rect x="1004" y="426" width="162" height="50" rx="12" fill="#0F1219" stroke="#4A5366" stroke-width="1.6" class="ants" stroke-dasharray="6 3"/>
+<text x="1018" y="447" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#F2EDE0">Publish</text>
+<text x="1018" y="464" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8A93A6">real weights, shared</text>
+<text x="1154" y="446" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#4A5366">○</text>
+<text x="470" y="503" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.6" fill="#8A93A6">VISION · DETECT</text>
+<rect x="470" y="512" width="162" height="50" rx="12" fill="#0F1219" stroke="#4A5366" stroke-width="1.6" class="ants" stroke-dasharray="6 3"/>
+<text x="484" y="533" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#F2EDE0">Face recognition</text>
+<text x="484" y="550" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8A93A6">webcams, security cams</text>
+<text x="620" y="532" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#4A5366">○</text>
+<line x1="632" x2="644" y1="537.0" y2="537.0" stroke="#8A93A6" stroke-opacity="0.5"/><path d="M639,533.0 L644,537.0 L639,541.0" fill="none" stroke="#8A93A6" stroke-opacity="0.7"/>
+<rect x="648" y="512" width="162" height="50" rx="12" fill="#0F1219" stroke="#4A5366" stroke-width="1.6" class="ants" stroke-dasharray="6 3"/>
+<text x="662" y="533" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#F2EDE0">Object recognition</text>
+<text x="662" y="550" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8A93A6">what's in the frame</text>
+<text x="798" y="532" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#4A5366">○</text>
+<line x1="810" x2="822" y1="537.0" y2="537.0" stroke="#8A93A6" stroke-opacity="0.5"/><path d="M817,533.0 L822,537.0 L817,541.0" fill="none" stroke="#8A93A6" stroke-opacity="0.7"/>
+<rect x="826" y="512" width="162" height="50" rx="12" fill="#0F1219" stroke="#4A5366" stroke-width="1.6" class="ants" stroke-dasharray="6 3"/>
+<text x="840" y="533" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#F2EDE0">Open-vocabulary</text>
+<text x="840" y="550" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8A93A6">find anything you name</text>
+<text x="976" y="532" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#4A5366">○</text>
+<line x1="988" x2="1000" y1="537.0" y2="537.0" stroke="#8A93A6" stroke-opacity="0.5"/><path d="M995,533.0 L1000,537.0 L995,541.0" fill="none" stroke="#8A93A6" stroke-opacity="0.7"/>
+<rect x="1004" y="512" width="162" height="50" rx="12" fill="#0F1219" stroke="#4A5366" stroke-width="1.6" class="ants" stroke-dasharray="6 3"/>
+<text x="1018" y="533" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#F2EDE0">Your conditions</text>
+<text x="1018" y="550" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8A93A6">low-res, fog, odd angles</text>
+<text x="1154" y="532" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#4A5366">○</text>
+<text x="470" y="589" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.6" fill="#8A93A6">VISION · SORT &amp; MAKE</text>
+<rect x="470" y="598" width="162" height="50" rx="12" fill="#0F1219" stroke="#4A5366" stroke-width="1.6" class="ants" stroke-dasharray="6 3"/>
+<text x="484" y="619" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#F2EDE0">Classification</text>
+<text x="484" y="636" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8A93A6">your own categories</text>
+<text x="620" y="618" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#4A5366">○</text>
+<line x1="632" x2="644" y1="623.0" y2="623.0" stroke="#8A93A6" stroke-opacity="0.5"/><path d="M639,619.0 L644,623.0 L639,627.0" fill="none" stroke="#8A93A6" stroke-opacity="0.7"/>
+<rect x="648" y="598" width="162" height="50" rx="12" fill="#0F1219" stroke="#4A5366" stroke-width="1.6" class="ants" stroke-dasharray="6 3"/>
+<text x="662" y="619" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#F2EDE0">Image generation</text>
+<text x="662" y="636" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8A93A6">from noise to a picture</text>
+<text x="798" y="618" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#4A5366">○</text>
+<text x="470" y="675" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.6" fill="#8A93A6">SPEECH</text>
+<rect x="470" y="684" width="162" height="50" rx="12" fill="#0F1219" stroke="#4A5366" stroke-width="1.6" class="ants" stroke-dasharray="6 3"/>
+<text x="484" y="705" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#F2EDE0">Speech recognition</text>
+<text x="484" y="722" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8A93A6">sound in, words out</text>
+<text x="620" y="704" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#4A5366">○</text>
+<line x1="632" x2="644" y1="709.0" y2="709.0" stroke="#8A93A6" stroke-opacity="0.5"/><path d="M639,705.0 L644,709.0 L639,713.0" fill="none" stroke="#8A93A6" stroke-opacity="0.7"/>
+<rect x="648" y="684" width="162" height="50" rx="12" fill="#0F1219" stroke="#4A5366" stroke-width="1.6" class="ants" stroke-dasharray="6 3"/>
+<text x="662" y="705" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#F2EDE0">Voice models</text>
+<text x="662" y="722" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8A93A6">the net behind a voice</text>
+<text x="798" y="704" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#4A5366">○</text>
+<text x="470" y="761" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" letter-spacing="1.6" fill="#8A93A6">PLATFORM</text>
+<rect x="470" y="770" width="162" height="50" rx="12" fill="#0F1219" stroke="#5FB8FF" stroke-width="1.6"/>
+<text x="484" y="791" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#F2EDE0">Web portal</text>
+<text x="484" y="808" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8A93A6">the course, in a browser</text>
+<text x="620" y="790" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#5FB8FF">◐</text>
+<line x1="632" x2="644" y1="795.0" y2="795.0" stroke="#8A93A6" stroke-opacity="0.5"/><path d="M639,791.0 L644,795.0 L639,799.0" fill="none" stroke="#8A93A6" stroke-opacity="0.7"/>
+<rect x="648" y="770" width="162" height="50" rx="12" fill="#0F1219" stroke="#4A5366" stroke-width="1.6" class="ants" stroke-dasharray="6 3"/>
+<text x="662" y="791" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#F2EDE0">AI tutor</text>
+<text x="662" y="808" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8A93A6">bring your own API key</text>
+<text x="798" y="790" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#4A5366">○</text>
+<line x1="810" x2="822" y1="795.0" y2="795.0" stroke="#8A93A6" stroke-opacity="0.5"/><path d="M817,791.0 L822,795.0 L817,799.0" fill="none" stroke="#8A93A6" stroke-opacity="0.7"/>
+<rect x="826" y="770" width="162" height="50" rx="12" fill="#0F1219" stroke="#4A5366" stroke-width="1.6" class="ants" stroke-dasharray="6 3"/>
+<text x="840" y="791" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#F2EDE0">Cloud GPUs</text>
+<text x="840" y="808" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8A93A6">RunPod, Colab, same tools</text>
+<text x="976" y="790" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#4A5366">○</text>
+<line x1="988" x2="1000" y1="795.0" y2="795.0" stroke="#8A93A6" stroke-opacity="0.5"/><path d="M995,791.0 L1000,795.0 L995,799.0" fill="none" stroke="#8A93A6" stroke-opacity="0.7"/>
+<rect x="1004" y="770" width="162" height="50" rx="12" fill="#0F1219" stroke="#4A5366" stroke-width="1.6" class="ants" stroke-dasharray="6 3"/>
+<text x="1018" y="791" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#F2EDE0">Windows + Linux</text>
+<text x="1018" y="808" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#8A93A6">port the app</text>
+<text x="1154" y="790" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#4A5366">○</text>
+<text x="44" y="876" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#73CCB3">●</text>
+<text x="62" y="876" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#8A93A6">built</text>
+<text x="110.0" y="876" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#5FB8FF">◐</text>
+<text x="128.0" y="876" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#8A93A6">in progress / coming soon</text>
+<text x="320.0" y="876" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#4A5366">○</text>
+<text x="338.0" y="876" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#8A93A6">open for contributors</text>
+<text x="1156" y="876" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12.5" fill="#8A93A6">Learn on the web · build in the app · train on your Mac or in the cloud</text>
 </svg>
